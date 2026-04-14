@@ -4,8 +4,16 @@ WiFi Security Analysis Tool
 Educational & Defensive Use Only
 
 HOW TO RUN:
-    Open a terminal in VS Code (Ctrl + `) and type:
+    System tray mode (DEFAULT — no console window):
+        Double-click aegis_tray.pyw
+          — or —
         python main.py
+
+    Terminal mode (classic CLI):
+        python main.py --cli
+
+DEPENDENCIES:
+    pip install pystray Pillow plyer
 
 LEGAL DISCLAIMER:
     This tool is for EDUCATIONAL and DEFENSIVE purposes only.
@@ -19,17 +27,14 @@ LEGAL DISCLAIMER:
 import sys       # For system operations like exiting
 import os        # For file path operations
 import json      # For reading JSON data
-import time      # For timing operations
 
 # ── Add project root to Python path ──
-# This line tells Python "look in this folder for modules."
-# Without it, Python can't find our scanner/, core/, etc.
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 # Now we can import our custom modules
-from scanner.wifi_scan import WiFiScanner, WiFiNetwork
+from scanner.wifi_scan import WiFiScanner
 from scanner.port_probe import PortScanner
 from core.engine import RiskEngine
 from core.blacklist import BlacklistManager
@@ -39,8 +44,6 @@ from api.telemetry import AegisLogger
 
 
 # ---------- TERMINAL COLORS ----------
-# These codes make text colorful in the terminal.
-# They work on most modern terminals including VS Code.
 
 class Colors:
     CYAN    = "\033[96m"
@@ -50,6 +53,18 @@ class Colors:
     BOLD    = "\033[1m"
     DIM     = "\033[2m"
     RESET   = "\033[0m"
+
+
+# ---------- HIDE CONSOLE WINDOW (Windows) ----------
+
+def _hide_console():
+    """Detach from the console entirely on Windows."""
+    if sys.platform == "win32":
+        try:
+            import ctypes
+            ctypes.windll.kernel32.FreeConsole()
+        except Exception:
+            pass
 
 
 # ---------- MAIN APPLICATION CLASS ----------
@@ -62,7 +77,6 @@ class AegisWireless:
     """
 
     def __init__(self):
-        # Create an instance of each module
         self.wifi_scanner = WiFiScanner()
         self.port_scanner = PortScanner()
         self.risk_engine = RiskEngine()
@@ -70,7 +84,6 @@ class AegisWireless:
         self.enforcer = NetworkEnforcer()
         self.logger = AegisLogger()
 
-        # Cache of last scan results
         self.last_wifi_results = []
         self.last_port_report = None
         self.last_assessments = []
@@ -107,7 +120,7 @@ class AegisWireless:
         while True:
             self._print_menu()
             choice = input(
-                f"\n  {Colors.CYAN}Enter choice (1-8): "
+                f"\n  {Colors.CYAN}Enter choice (0-9): "
                 f"{Colors.RESET}"
             ).strip()
 
@@ -125,11 +138,15 @@ class AegisWireless:
                 self._menu_vpn_status()
             elif choice == "7":
                 self._menu_full_audit()
-            elif choice in ("8", "q", "quit", "exit"):
+            elif choice == "8":
+                self._menu_tray_mode()
+            elif choice == "9":
+                self._menu_startup_config()
+            elif choice in ("0", "q", "quit", "exit"):
                 self._exit()
             else:
                 print(f"  {Colors.YELLOW}Invalid choice. "
-                      f"Please enter 1-8.{Colors.RESET}")
+                      f"Please enter 0-9.{Colors.RESET}")
 
     def _print_menu(self):
         """Display the main menu."""
@@ -145,7 +162,9 @@ class AegisWireless:
   {C.CYAN}5{C.RESET} | View Scan Logs
   {C.CYAN}6{C.RESET} | Check VPN Status
   {C.CYAN}7{C.RESET} | Full Network Audit (scan + analyze all)
-  {C.CYAN}8{C.RESET} | Exit
+  {C.CYAN}8{C.RESET} | Switch to System Tray Mode
+  {C.CYAN}9{C.RESET} | Configure Run on Startup
+  {C.CYAN}0{C.RESET} | Exit
   {C.BOLD}{'-' * 50}{C.RESET}""")
 
     # ── 1. WIFI SCAN ────────────────────────────────────────────
@@ -172,7 +191,6 @@ class AegisWireless:
         print(f"  {'-' * 80}")
 
         for i, net in enumerate(networks, 1):
-            # Color-code by encryption type
             if net.encryption == "Open":
                 enc_color = C.RED
             elif net.encryption in ("WEP", "WPA"):
@@ -180,7 +198,6 @@ class AegisWireless:
             else:
                 enc_color = C.GREEN
 
-            # Create a visual signal strength bar
             bars = self._signal_bar(net.signal_strength)
 
             print(
@@ -190,12 +207,10 @@ class AegisWireless:
                 f"{net.channel:>5}   {net.band}"
             )
 
-        # Log the results
         self.logger.log_wifi_scan(
             self.wifi_scanner.get_results_as_dicts()
         )
 
-        # Warn about open networks
         open_nets = [n for n in networks
                      if n.encryption == "Open"]
         if open_nets:
@@ -250,7 +265,6 @@ class AegisWireless:
 
         self.last_port_report = report
 
-        # Display summary
         print(f"\n  {C.BOLD}{'=' * 50}")
         print(f"  SCAN RESULTS: {report.target}")
         print(f"  {'=' * 50}{C.RESET}")
@@ -272,7 +286,6 @@ class AegisWireless:
                     print(f"  {C.DIM}         Banner: "
                           f"{p.banner[:60]}{C.RESET}")
 
-        # Log
         self.logger.log_port_scan(report.to_dict())
 
     # ── 3. RISK ANALYSIS ───────────────────────────────────────
@@ -297,7 +310,6 @@ class AegisWireless:
         ).strip()
 
         if choice.lower() == "a":
-            # Analyze all networks
             assessments = self.risk_engine.analyze_multiple(
                 self.last_wifi_results
             )
@@ -403,7 +415,6 @@ class AegisWireless:
             data = self.logger.read_json_log()
             if data:
                 output = json.dumps(data, indent=2)
-                # Show first 3000 characters
                 print(f"\n{output[:3000]}")
                 if len(output) > 3000:
                     print(f"\n  {C.DIM}... (output "
@@ -460,7 +471,6 @@ class AegisWireless:
         if confirm.lower() not in ("yes", "y"):
             return
 
-        # Step 1: WiFi Scan
         print(f"\n  {C.CYAN}[Step 1/4] Scanning WiFi "
               f"networks...{C.RESET}")
         networks = self.wifi_scanner.scan()
@@ -472,7 +482,6 @@ class AegisWireless:
                   f"Audit aborted.{C.RESET}")
             return
 
-        # Step 2: Port scan (localhost)
         print(f"  {C.CYAN}[Step 2/4] Scanning local "
               f"ports...{C.RESET}")
         report = self.port_scanner.quick_scan("127.0.0.1")
@@ -480,13 +489,11 @@ class AegisWireless:
         print(f"  Found {len(report.open_ports)} "
               f"open port(s).\n")
 
-        # Step 3: VPN check
         print(f"  {C.CYAN}[Step 3/4] Checking VPN "
               f"status...{C.RESET}")
         vpn = VPNStatus.is_vpn_active()
         print(f"  VPN: {'Active' if vpn else 'Not detected'}\n")
 
-        # Step 4: Risk analysis on all networks
         print(f"  {C.CYAN}[Step 4/4] Analyzing all "
               f"networks...{C.RESET}\n")
         assessments = self.risk_engine.analyze_multiple(
@@ -494,7 +501,6 @@ class AegisWireless:
         )
         self.last_assessments = assessments
 
-        # Print summary table
         print(f"\n  {C.BOLD}AUDIT RESULTS{C.RESET}")
         print(f"  {'-' * 60}")
         print(f"  {'Network':<28} {'Score':>6}  "
@@ -514,7 +520,6 @@ class AegisWireless:
                 f"{len(a.findings):>5}"
             )
 
-        # Stats
         safe = sum(1 for a in assessments
                    if a.risk_level == "SAFE")
         moderate = sum(1 for a in assessments
@@ -529,7 +534,6 @@ class AegisWireless:
         print(f"    VPN:       "
               f"{'Protected' if vpn else 'Unprotected'}")
 
-        # Log everything
         self.logger.log_wifi_scan(
             self.wifi_scanner.get_results_as_dicts()
         )
@@ -537,6 +541,88 @@ class AegisWireless:
         for a in assessments:
             self.logger.log_assessment(a.to_dict())
         self.logger.log_message("Full audit completed")
+
+    # ── 8. SWITCH TO TRAY MODE ─────────────────────────────────
+
+    def _menu_tray_mode(self):
+        """Launch the system tray UI and exit the terminal."""
+        C = Colors
+        print(f"\n  {C.BOLD}System Tray Mode{C.RESET}")
+        print(f"  {C.DIM}Aegis will minimize to your system tray")
+        print(f"  and send toast notifications for alerts.{C.RESET}")
+
+        try:
+            import pystray       # noqa: F401
+            from PIL import Image  # noqa: F401
+        except ImportError:
+            print(f"\n  {C.RED}Missing dependencies for "
+                  f"tray mode.{C.RESET}")
+            print(f"  {C.YELLOW}Install them with:{C.RESET}")
+            print(f"    pip install pystray Pillow plyer")
+            return
+
+        confirm = input(
+            f"\n  Switch to tray mode? (yes/no): "
+        ).strip()
+        if confirm.lower() not in ("yes", "y"):
+            return
+
+        print(f"\n  {C.CYAN}Saving logs and switching "
+              f"to tray mode...{C.RESET}")
+        self.logger.save_session()
+
+        from ui.tray import AegisTray
+        tray = AegisTray()
+        tray.run()
+        sys.exit(0)
+
+    # ── 9. CONFIGURE RUN ON STARTUP ──────────────────────────
+
+    def _menu_startup_config(self):
+        """One-time setup to start Aegis on login."""
+        C = Colors
+        print(f"\n  {C.BOLD}Run on Startup Configuration{C.RESET}")
+
+        from ui.startup import StartupManager
+
+        currently = StartupManager.is_enabled()
+        status = (f"{C.GREEN}ENABLED{C.RESET}" if currently
+                  else f"{C.YELLOW}DISABLED{C.RESET}")
+        print(f"  Current status: {status}\n")
+
+        if currently:
+            print(f"  1 | Disable run on startup")
+            print(f"  2 | Back to main menu")
+            choice = input(f"\n  Choice: ").strip()
+            if choice == "1":
+                ok = StartupManager.disable()
+                if ok:
+                    print(f"  {C.GREEN}Startup entry "
+                          f"removed.{C.RESET}")
+                else:
+                    print(f"  {C.RED}Failed to remove "
+                          f"startup entry.{C.RESET}")
+        else:
+            print(f"  {C.DIM}This will configure Aegis to "
+                  f"start in system tray mode")
+            print(f"  automatically when you log in to "
+                  f"your computer.{C.RESET}\n")
+            print(f"  1 | Enable run on startup")
+            print(f"  2 | Back to main menu")
+            choice = input(f"\n  Choice: ").strip()
+            if choice == "1":
+                ok = StartupManager.enable()
+                if ok:
+                    print(f"\n  {C.GREEN}Done! Aegis will "
+                          f"start in tray mode on login.{C.RESET}")
+                    print(f"  {C.DIM}You can disable this "
+                          f"anytime from this menu or the "
+                          f"tray icon.{C.RESET}")
+                else:
+                    print(f"  {C.RED}Failed to register "
+                          f"startup.{C.RESET}")
+                    print(f"  {C.YELLOW}You may need to run "
+                          f"as administrator.{C.RESET}")
 
     # ── LEGAL NOTICE ───────────────────────────────────────────
 
@@ -569,14 +655,33 @@ class AegisWireless:
 
 
 # ---------- ENTRY POINT ----------
-# This is what runs when you type "python main.py"
+# Default: system tray mode (no console window)
+# Use --cli for the classic terminal interface
 
 if __name__ == "__main__":
     try:
-        app = AegisWireless()
-        app.run()
+        if "--cli" in sys.argv:
+            # ── Classic terminal mode ──
+            app = AegisWireless()
+            app.run()
+        else:
+            # ── Default: system tray mode ──
+            _hide_console()
+            try:
+                from ui.tray import AegisTray
+                tray = AegisTray()
+                tray.run()
+            except ImportError as e:
+                print(f"\n  {Colors.RED}Cannot start tray mode. "
+                      f"Missing dependency: {e}{Colors.RESET}")
+                print(f"  {Colors.YELLOW}Install with:  "
+                      f"pip install pystray Pillow plyer"
+                      f"{Colors.RESET}")
+                print(f"\n  {Colors.DIM}Use 'python main.py --cli' "
+                      f"for terminal mode.{Colors.RESET}\n")
+                sys.exit(1)
+
     except KeyboardInterrupt:
-        # Handle Ctrl+C gracefully
         print(f"\n\n  {Colors.CYAN}Interrupted. "
               f"Saving logs...{Colors.RESET}")
         try:

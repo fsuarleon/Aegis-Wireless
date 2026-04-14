@@ -88,5 +88,104 @@
     ],
     "enforcement_actions": [],
     "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T15:51:09.584229",
+    "session_end": "2026-04-14T15:51:24.417103",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T15:53:11.226931",
+    "session_end": "2026-04-14T15:53:19.907117",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T15:55:18.106380",
+    "session_end": "2026-04-14T15:55:26.036772",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T15:55:47.352782",
+    "session_end": "2026-04-14T15:55:51.013981",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T15:56:31.901494",
+    "session_end": "2026-04-14T15:56:43.436740",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T16:04:50.695091",
+    "session_end": "2026-04-14T16:05:00.273690",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T16:09:26.401209",
+    "session_end": "2026-04-14T16:09:30.555697",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T16:10:16.062844",
+    "session_end": "2026-04-14T16:10:22.563252",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T16:36:33.534552",
+    "session_end": "2026-04-14T16:37:20.491927",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T16:40:02.302176",
+    "session_end": "2026-04-14T16:40:07.156486",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T16:51:16.501724",
+    "session_end": "2026-04-14T16:52:59.366011",
+    "wifi_scans": [],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
   }
 ]
