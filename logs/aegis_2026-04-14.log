@@ -1,0 +1,13 @@
+2026-04-14 13:28:25 | INFO     | Aegis Wireless session started
+2026-04-14 13:28:45 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 13:28:45 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 13:29:16 | INFO     | Port scan on 3: 0 open out of 0 scanned
+2026-04-14 13:30:35 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 13:30:35 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 13:30:35 | INFO     | Port scan on 127.0.0.1: 3 open out of 25 scanned
+2026-04-14 13:30:35 | INFO     |   Port   135 — MS-RPC (open)
+2026-04-14 13:30:35 | INFO     |   Port   445 — SMB (open)
+2026-04-14 13:30:35 | INFO     |   Port  3306 — MySQL (open)
+2026-04-14 13:30:35 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 13:30:35 | INFO     | Full audit completed
+2026-04-14 13:30:47 | INFO     | Session log saved to C:\Users\fenci\OneDrive\Desktop\Aegis_Wireless\logs\aegis_2026-04-14.json

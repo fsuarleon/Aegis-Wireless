@@ -1,0 +1,92 @@
+[
+  {
+    "session_start": "2026-04-14T13:28:25.697043",
+    "session_end": "2026-04-14T13:30:47.045091",
+    "wifi_scans": [
+      {
+        "timestamp": "2026-04-14T13:28:45.008256",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "MusicalFamily",
+            "signal_strength": 0,
+            "encryption": "WPA2",
+            "bssid": "",
+            "channel": 0,
+            "band": ""
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-14T13:30:35.722949",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "MusicalFamily",
+            "signal_strength": 0,
+            "encryption": "WPA2",
+            "bssid": "",
+            "channel": 0,
+            "band": ""
+          }
+        ]
+      }
+    ],
+    "port_scans": [
+      {
+        "timestamp": "2026-04-14T13:29:16.425962",
+        "target": "3",
+        "total_scanned": 0,
+        "open_port_count": 0,
+        "closed_count": 0,
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T13:30:35.724224",
+        "target": "127.0.0.1",
+        "total_scanned": 25,
+        "open_port_count": 3,
+        "closed_count": 22,
+        "open_ports": [
+          {
+            "port": 135,
+            "state": "open",
+            "service": "MS-RPC",
+            "risk_note": "Windows RPC \u2014 common attack target",
+            "banner": ""
+          },
+          {
+            "port": 445,
+            "state": "open",
+            "service": "SMB",
+            "risk_note": "Windows file sharing \u2014 ransomware vector",
+            "banner": ""
+          },
+          {
+            "port": 3306,
+            "state": "open",
+            "service": "MySQL",
+            "risk_note": "Database \u2014 should not be exposed publicly",
+            "banner": "J\u0000\u0000\u0000\n8.0.43\u0000\t\u0000\u0000\u0000,OA\u0010g\u000b\u0011\u0005\u0000\ufffd\ufffd\ufffd\u0002\u0000\ufffd\ufffd\u0015\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000R#N|\u0019`v?\u0018\u0018(g\u0000caching_sha2_password\u0000"
+          }
+        ]
+      }
+    ],
+    "assessments": [
+      {
+        "timestamp": "2026-04-14T13:30:35.724516",
+        "ssid": "MusicalFamily",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'MusicalFamily' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      }
+    ],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  }
+]

@@ -1,0 +1,14 @@
+2026-04-13 22:39:06 | INFO     | Aegis Wireless session started
+2026-04-14 10:55:53 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 10:55:53 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 10:58:26 | INFO     | Port scan on 3: 0 open out of 0 scanned
+2026-04-14 10:59:27 | INFO     | Blacklist: added 'Sketchy_Coffee_WiFi' — Open network at coffee shop, no encryption
+2026-04-14 11:00:35 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 11:00:35 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 11:00:35 | INFO     | Port scan on 127.0.0.1: 3 open out of 25 scanned
+2026-04-14 11:00:35 | INFO     |   Port   135 — MS-RPC (open)
+2026-04-14 11:00:35 | INFO     |   Port   445 — SMB (open)
+2026-04-14 11:00:35 | INFO     |   Port  3306 — MySQL (open)
+2026-04-14 11:00:35 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 11:00:35 | INFO     | Full audit completed
+2026-04-14 11:00:42 | INFO     | Session log saved to C:\Users\fenci\OneDrive\Desktop\Aegis_Wireless\logs\aegis_2026-04-13.json

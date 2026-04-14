@@ -1,0 +1,31 @@
+{
+    "app_name": "Aegis Wireless",
+    "version": "1.0.0",
+    "description": "WiFi Security Analysis Tool — Educational & Defensive Use Only",
+
+    "scan_settings": {
+        "default_port_range": [1, 1024],
+        "common_ports": [21, 22, 23, 25, 53, 80, 110, 135, 139, 143, 443, 445, 993, 995, 3306, 3389, 5900, 8080, 8443],
+        "scan_timeout_seconds": 1.0,
+        "max_threads": 50
+    },
+
+    "risk_thresholds": {
+        "open_port_warning": 5,
+        "dangerous_ports": [23, 135, 139, 445, 3389, 5900],
+        "safe_encryption_types": ["WPA2", "WPA3", "WPA2-Enterprise", "WPA3-Enterprise"]
+    },
+
+    "logging": {
+        "log_directory": "logs",
+        "log_format": "%(asctime)s | %(levelname)-8s | %(message)s",
+        "max_log_files": 30
+    },
+
+    "display": {
+        "banner_color": "cyan",
+        "warning_color": "yellow",
+        "danger_color": "red",
+        "safe_color": "green"
+    }
+}
