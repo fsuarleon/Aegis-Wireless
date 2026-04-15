@@ -8,7 +8,7 @@
         "minimum_encryption": "WPA2",
         "allow_open_networks": false,
         "max_acceptable_risk_score": 40,
-        "auto_enforce_disconnect": false,
+        "auto_enforce_disconnect": true,
         "blocked_ssids": [],
         "trusted_ssids": [],
         "auto_scan_on_start": true,
