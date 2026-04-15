@@ -1,18 +1,10 @@
 {
   "blacklisted_networks": [
-    "Sketchy_Coffee_WiFi",
-    "WhiteSky-109Tower"
+    "Sketchy_Coffee_WiFi"
   ],
   "entries": [
     {
       "ssid": "Sketchy_Coffee_WiFi",
-      "bssid": "",
-      "reason": "Open network at coffee shop, no encryption",
-      "date_added": "2026-04-14T10:59:27.916350",
-      "flagged_count": 1
-    },
-    {
-      "ssid": "WhiteSky-109Tower",
       "bssid": "",
       "reason": "Open network at coffee shop, no encryption",
       "date_added": "2026-04-14T10:59:27.916350",

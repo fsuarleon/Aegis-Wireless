@@ -318,7 +318,6 @@ class BlacklistManager:
                 data.setdefault("metadata", {})
 
                 # ── REPAIR: rebuild quick-lookup from entries ──
-                # This is the fix for the WhiteSky-109Tower bug:
                 # entries had the SSID but blacklisted_networks
                 # did not, so is_blacklisted() returned False.
                 rebuilt = list({
