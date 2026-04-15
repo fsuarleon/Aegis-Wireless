@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['C:\\Users\\rylan\\downloads\\Aegis_Wireless\\aegis_tray.pyw'],
+    ['C:\\Users\\rylan\\Downloads\\Test Enviorment\\Aegis_Wireless\\aegis_tray.pyw'],
     pathex=[],
     binaries=[],
     datas=[('config', 'config'), ('assets', 'assets'), ('ui', 'ui'), ('scanner', 'scanner'), ('core', 'core'), ('network', 'network'), ('api', 'api')],
@@ -35,5 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['C:\\Users\\rylan\\downloads\\Aegis_Wireless\\assets\\aegis_icon.ico'],
+    icon=['C:\\Users\\rylan\\Downloads\\Test Enviorment\\Aegis_Wireless\\assets\\aegis_icon.ico'],
 )

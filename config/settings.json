@@ -2,126 +2,124 @@
     "app_name": "Aegis Wireless",
     "version": "1.0.0",
     "description": "WiFi Security Analysis Tool",
-
     "_comment_admin_mode": "ADMIN MODE: Controls the tray menu complexity. When false, users only see: Status, Last Scan, Scan Now, and Exit. When true, the tray also shows: Full Audit, VPN Status, View Logs, Run on Startup toggle, Notifications toggle, and Open Terminal UI. Set to false for end-user deployments, true for IT admin/testing machines.",
     "admin_mode": true,
-
     "policy": {
         "_comment_policy": "IT SECURITY POLICIES: These settings are enforced automatically in the background. Users cannot override them. This is where IT admins define the security posture for their organization.",
-
         "_comment_require_vpn": "REQUIRE VPN: When true, every scan checks for an active VPN connection. If no VPN is detected, a toast notification warns the user. Set to true for corporate environments where VPN usage is mandatory. Set to false for home/personal use.",
         "require_vpn": true,
-
         "_comment_minimum_encryption": "MINIMUM ENCRYPTION: The lowest acceptable WiFi encryption standard. Networks below this level trigger a warning. Options: 'Open' (no minimum), 'WEP' (very weak), 'WPA' (weak), 'WPA2' (recommended minimum), 'WPA3' (strictest). For corporate use, set to 'WPA2' or 'WPA3'. Any network with encryption weaker than this value is flagged as risky.",
         "minimum_encryption": "WPA2",
-
         "_comment_allow_open_networks": "ALLOW OPEN NETWORKS: When false, any unencrypted (Open) network triggers a toast alert. When true, open networks are silently allowed. Always set to false in corporate environments.",
         "allow_open_networks": false,
-
         "_comment_max_risk_score": "MAX ACCEPTABLE RISK SCORE: Networks scoring below this number (0-100) are classified as DANGEROUS. Higher number = stricter policy (more networks flagged). Lower number = more lenient. Default 40 means any network scoring under 40/100 triggers a danger alert. Range: 0 (nothing is dangerous) to 100 (everything is dangerous).",
         "max_acceptable_risk_score": 40,
-
         "_comment_auto_enforce": "AUTO ENFORCE DISCONNECT: When true, Aegis will attempt to automatically disconnect from networks rated DANGEROUS. When false, it only warns via notification. WARNING: Enabling this can disrupt connectivity. Only enable in high-security environments.",
         "auto_enforce_disconnect": false,
-
         "_comment_blocked_ssids": "BLOCKED SSIDS: A list of WiFi network names that are always flagged as dangerous, regardless of their encryption or signal. Use this to blacklist known-bad networks in your area. Example: [\"FreeAirportWifi\", \"HotelGuest\", \"Open_Public\"]. When a blocked network is detected nearby, a toast alert fires immediately.",
         "blocked_ssids": [],
-
         "_comment_trusted_ssids": "TRUSTED SSIDS: A list of WiFi network names that are always considered safe. These skip risk analysis entirely. Use for your corporate office networks. Example: [\"CorpWifi-5G\", \"OfficeSecure\"]. Only trust networks you control.",
         "trusted_ssids": [],
-
         "_comment_auto_scan": "AUTO SCAN ON START: When true, Aegis runs a WiFi scan immediately when the tray icon starts. The user sees a toast with results within a few seconds of launch. When false, no scan runs until the user clicks 'Scan Now' or the periodic timer fires.",
         "auto_scan_on_start": true,
-
         "_comment_scan_interval": "SCAN INTERVAL MINUTES: How often Aegis automatically scans in the background (in minutes). Set to 0 to disable periodic scanning entirely. Set to 5-10 for high-security environments. Set to 15-30 for normal use. Each scan produces a toast notification if threats are found.",
         "scan_interval_minutes": 15,
-
-        "_comment_org_name": "ORG NAME: Your organization's name. If set, it appears in the tray menu header as 'Aegis Wireless — YourCompany'. Leave empty for no branding. Example: \"Acme Corp\".",
+        "_comment_org_name": "ORG NAME: Your organization's name. If set, it appears in the tray menu header as 'Aegis Wireless \u2014 YourCompany'. Leave empty for no branding. Example: \"Acme Corp\".",
         "org_name": ""
     },
-
     "scan_settings": {
         "_comment_scan_settings": "SCAN SETTINGS: Technical parameters for port scanning. These control how the port scanner probes devices on the network. Only modify if you understand networking.",
-
         "_comment_port_range": "DEFAULT PORT RANGE: The range of ports scanned during a 'Full Scan'. Format: [start, end]. [1, 1024] covers all well-known service ports. Increase to [1, 65535] for a complete scan (much slower).",
-        "default_port_range": [1, 1024],
-
+        "default_port_range": [
+            1,
+            1024
+        ],
         "_comment_common_ports": "COMMON PORTS: Specific ports checked during a 'Quick Scan'. These are the most commonly exploited service ports. Add ports your organization cares about (e.g., 8080 for web proxies, 27017 for MongoDB). Remove ports you don't need to reduce scan time.",
-        "common_ports": [21, 22, 23, 25, 53, 80, 110, 135, 139, 143, 443, 445, 993, 995, 3306, 3389, 5900, 8080, 8443],
-
+        "common_ports": [
+            21,
+            22,
+            23,
+            25,
+            53,
+            80,
+            110,
+            135,
+            139,
+            143,
+            443,
+            445,
+            993,
+            995,
+            3306,
+            3389,
+            5900,
+            8080,
+            8443
+        ],
         "_comment_timeout": "SCAN TIMEOUT SECONDS: How long to wait for a port to respond before marking it closed. Lower = faster scans but may miss slow-responding ports. Higher = more accurate but slower. Default 1.0 is a good balance. Set to 0.5 for fast networks, 2.0 for high-latency networks.",
         "scan_timeout_seconds": 1.0,
-
         "_comment_threads": "MAX THREADS: Number of simultaneous port checks. Higher = faster scans but more CPU/network usage. Lower = slower but less impact on the system. Default 50 is safe for most machines. Reduce to 20 on low-powered devices. Increase to 100 on fast networks.",
         "max_threads": 50
     },
-
     "risk_thresholds": {
         "_comment_risk_thresholds": "RISK THRESHOLDS: Define what the risk engine considers dangerous. These feed into the safety score calculation.",
-
         "_comment_port_warning": "OPEN PORT WARNING: If a device has more than this many open ports, it gets flagged in the risk assessment. Default 5. Lower for stricter security.",
         "open_port_warning": 5,
-
         "_comment_dangerous_ports": "DANGEROUS PORTS: Ports that should never be open on public/untrusted networks. Each open dangerous port reduces the safety score. 23=Telnet, 135=RPC, 139=NetBIOS, 445=SMB, 3389=RDP, 5900=VNC. Add any ports your organization considers risky.",
-        "dangerous_ports": [23, 135, 139, 445, 3389, 5900],
-
+        "dangerous_ports": [
+            23,
+            135,
+            139,
+            445,
+            3389,
+            5900
+        ],
         "_comment_safe_encryption": "SAFE ENCRYPTION TYPES: Encryption standards considered secure. Networks using anything NOT in this list lose points in risk assessment. Add or remove standards based on your security requirements.",
-        "safe_encryption_types": ["WPA2", "WPA3", "WPA2-Enterprise", "WPA3-Enterprise"]
+        "safe_encryption_types": [
+            "WPA2",
+            "WPA3",
+            "WPA2-Enterprise",
+            "WPA3-Enterprise"
+        ]
     },
-
     "notifications": {
         "_comment_notifications": "NOTIFICATION SETTINGS: Control which types of toast notifications are shown to the user. IT admins can disable specific categories. All default to true. Set any to false to suppress that notification type organization-wide.",
-
         "_comment_enabled": "ENABLED: Master switch for all notifications. When false, NO toasts are shown at all. When true, individual categories below control what appears.",
         "enabled": true,
-
         "_comment_cooldown": "COOLDOWN SECONDS: Minimum time between notifications of the same type. Prevents notification spam during rapid scanning. Default 30. Set higher (60-120) if users complain about too many alerts. Set lower (10-15) for high-security environments that need immediate alerts.",
         "cooldown_seconds": 30,
-
-        "_comment_on_dangerous": "ON DANGEROUS NETWORK: Show a toast when a network is rated DANGEROUS (safety score below threshold). This is the most critical alert — think carefully before disabling.",
+        "_comment_on_dangerous": "ON DANGEROUS NETWORK: Show a toast when a network is rated DANGEROUS (safety score below threshold). This is the most critical alert \u2014 think carefully before disabling.",
         "on_dangerous_network": true,
-
         "_comment_on_open": "ON OPEN NETWORK: Show a toast when unencrypted (Open) WiFi networks are detected nearby. Useful in corporate environments. Can be disabled if your location intentionally has open guest networks.",
         "on_open_network": true,
-
         "_comment_on_blacklisted": "ON BLACKLISTED NETWORK: Show a toast when a network from the blocked_ssids list (or manually blacklisted) is detected nearby.",
         "on_blacklisted_network": true,
-
         "_comment_on_vpn": "ON VPN MISSING: Show a toast when no VPN connection is detected. Only fires if policy.require_vpn is also true. Disable this to stop VPN reminders while keeping VPN checks in scan logs.",
         "on_vpn_missing": true,
-
-        "_comment_on_scan": "ON SCAN COMPLETE: Show a summary toast after every scan finishes (e.g., 'Found 5 networks — all safe'). Disable this for silent background operation where only threats trigger alerts.",
+        "_comment_on_scan": "ON SCAN COMPLETE: Show a summary toast after every scan finishes (e.g., 'Found 5 networks \u2014 all safe'). Disable this for silent background operation where only threats trigger alerts.",
         "on_scan_complete": true,
-
         "_comment_on_startup": "ON STARTUP: Show a toast when Aegis first starts ('Running in system tray'). Disable for a fully silent launch.",
-        "on_startup": true
+        "on_startup": true,
+        "on_connection_blocked": true,
+        "on_connection_allowed": true
     },
-
     "tray": {
-        "_comment_tray": "TRAY SETTINGS: Control the system tray icon behavior and what users are allowed to change. These are separate from admin_mode — they provide fine-grained control over user permissions even when admin_mode is true.",
-
-        "_comment_startup": "RUN ON STARTUP: Whether Aegis is currently registered to start on login. This is set automatically when the user or installer enables startup — do not edit manually unless troubleshooting.",
+        "_comment_tray": "TRAY SETTINGS: Control the system tray icon behavior and what users are allowed to change. These are separate from admin_mode \u2014 they provide fine-grained control over user permissions even when admin_mode is true.",
+        "_comment_startup": "RUN ON STARTUP: Whether Aegis is currently registered to start on login. This is set automatically when the user or installer enables startup \u2014 do not edit manually unless troubleshooting.",
         "run_on_startup": true,
-
         "_comment_exit": "SHOW EXIT BUTTON: Whether users can close Aegis from the tray menu. Set to false to prevent users from stopping the security tool. They would need Task Manager to kill it. Use with caution.",
         "show_exit_button": true,
-
         "_comment_user_notif": "USER CAN DISABLE NOTIFICATIONS: When false, the Notifications toggle is hidden from the tray menu (even in admin mode users cannot disable alerts through the tray). When true, users can toggle notifications on/off from the tray. IT recommendation: keep false so users can't silence security warnings.",
         "user_can_disable_notifications": false,
-
         "_comment_user_startup": "USER CAN TOGGLE STARTUP: When false, the Run on Startup toggle is hidden from the tray menu. When true, users can enable/disable auto-start. IT recommendation: keep false so users can't prevent Aegis from launching on login.",
         "user_can_toggle_startup": false
     },
-
     "logging": {
         "_comment_logging": "LOGGING SETTINGS: Control where and how scan logs are stored.",
-
         "_comment_log_dir": "LOG DIRECTORY: Folder where log files are saved, relative to the Aegis install directory. Default 'logs'. Change to an absolute path (e.g., 'C:\\\\AegisLogs') for centralized logging.",
         "log_directory": "logs",
-
         "_comment_log_format": "LOG FORMAT: Python logging format string for .log text files. Default includes timestamp, severity level, and message. Only change if you need a specific format for log aggregation tools.",
         "log_format": "%(asctime)s | %(levelname)-8s | %(message)s",
-
         "_comment_max_logs": "MAX LOG FILES: Maximum number of daily log files to keep before old ones are deleted. Default 30 (one month of history). Increase for longer retention. Set to 0 to keep logs forever (not recommended).",
         "max_log_files": 30
     }

@@ -14,45 +14,295 @@
 2026-04-14 15:51:09 | INFO     | Aegis Wireless session started
 2026-04-14 15:51:24 | INFO     | Session log saved to C:\Users\fenci\OneDrive\Desktop\Aegis_Wireless\logs\aegis_2026-04-14.json
 2026-04-14 15:51:24 | INFO     | Aegis tray mode started
-2026-04-14 15:53:11 | INFO     | Aegis Wireless session started
-2026-04-14 15:53:19 | INFO     | Session log saved to C:\Users\rylan\Downloads\Aegis_Wireless\logs\aegis_2026-04-14.json
-2026-04-14 15:55:18 | INFO     | Aegis Wireless session started
-2026-04-14 15:55:26 | INFO     | Session log saved to C:\Users\rylan\Downloads\Aegis_Wireless\logs\aegis_2026-04-14.json
-2026-04-14 15:55:26 | INFO     | Aegis tray mode started
-2026-04-14 15:55:47 | INFO     | Aegis Wireless session started
-2026-04-14 15:55:51 | INFO     | Session log saved to C:\Users\rylan\Downloads\Aegis_Wireless\logs\aegis_2026-04-14.json
-2026-04-14 15:55:51 | INFO     | Aegis tray mode started
-2026-04-14 15:56:31 | INFO     | Aegis Wireless session started
-2026-04-14 15:56:43 | INFO     | Session log saved to C:\Users\rylan\Downloads\Aegis_Wireless\logs\aegis_2026-04-14.json
-2026-04-14 15:56:43 | INFO     | Aegis tray mode started
-2026-04-14 15:57:55 | INFO     | WiFi scan found 1 network(s)
-2026-04-14 15:57:55 | INFO     |   Network: WhiteSky-109Tower         Signal:  89%  Encryption: WPA2
-2026-04-14 15:57:55 | INFO     | Assessment: WhiteSky-109Tower — OK SAFE (Score: 100/100)
-2026-04-14 15:57:55 | INFO     | Quick scan completed (tray)
-2026-04-14 16:01:23 | INFO     | Aegis tray mode started
-2026-04-14 16:04:50 | INFO     | Aegis Wireless session started
-2026-04-14 16:05:00 | INFO     | Session log saved to C:\Users\rylan\Downloads\Aegis_Wireless\logs\aegis_2026-04-14.json
-2026-04-14 16:05:00 | INFO     | Aegis tray mode started
-2026-04-14 16:09:26 | INFO     | Aegis Wireless session started
-2026-04-14 16:09:30 | INFO     | Session log saved to C:\Users\rylan\Downloads\Aegis_Wireless\logs\aegis_2026-04-14.json
-2026-04-14 16:09:30 | INFO     | Aegis tray mode started
-2026-04-14 16:10:16 | INFO     | Aegis Wireless session started
-2026-04-14 16:10:22 | INFO     | Session log saved to C:\Users\rylan\Downloads\Aegis_Wireless\logs\aegis_2026-04-14.json
-2026-04-14 16:10:23 | INFO     | Aegis tray mode started
-2026-04-14 16:36:33 | INFO     | Aegis Wireless session started
-2026-04-14 16:37:20 | INFO     | Session log saved to C:\Users\rylan\Downloads\Aegis_Wireless\logs\aegis_2026-04-14.json
-2026-04-14 16:37:20 | INFO     | Aegis tray mode started
-2026-04-14 16:40:02 | INFO     | Aegis Wireless session started
-2026-04-14 16:40:07 | INFO     | Session log saved to C:\Users\rylan\Downloads\Aegis_Wireless\logs\aegis_2026-04-14.json
-2026-04-14 16:40:07 | INFO     | Aegis tray mode started
-2026-04-14 16:43:12 | INFO     | Aegis Wireless session started
-2026-04-14 16:45:52 | INFO     | Aegis tray mode started
-2026-04-14 16:46:20 | INFO     | Aegis tray mode started
-2026-04-14 16:46:55 | INFO     | WiFi scan found 1 network(s)
-2026-04-14 16:46:55 | INFO     |   Network: WhiteSky-109Tower         Signal:  88%  Encryption: WPA2
-2026-04-14 16:46:55 | INFO     | Assessment: WhiteSky-109Tower — OK SAFE (Score: 100/100)
-2026-04-14 16:46:55 | INFO     | Quick scan completed (tray)
-2026-04-14 16:51:16 | INFO     | Aegis tray mode started
-2026-04-14 16:52:59 | INFO     | Session log saved to C:\Users\rylan\Downloads\Aegis_Wireless\logs\aegis_2026-04-14.json
-2026-04-14 16:52:59 | INFO     | Aegis tray mode exited
-2026-04-14 16:53:35 | INFO     | Aegis tray mode started
+2026-04-14 17:16:59 | INFO     | Aegis Wireless session started
+2026-04-14 17:17:17 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 17:17:17 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 17:17:36 | INFO     | Session log saved to C:\Users\fenci\OneDrive\Desktop\Aegis_Wireless\logs\aegis_2026-04-14.json
+2026-04-14 17:17:49 | INFO     | Aegis Wireless session started
+2026-04-14 17:17:57 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 17:17:57 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:09:17 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:09:17 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:09:17 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:09:17 | INFO     | Quick scan completed (tray)
+2026-04-14 21:09:41 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:09:41 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:09:41 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:09:41 | INFO     | Quick scan completed (tray)
+2026-04-14 21:14:58 | INFO     | Aegis Wireless session started
+2026-04-14 21:15:05 | INFO     | Session log saved to C:\Users\fenci\OneDrive\Desktop\Aegis_Wireless\logs\aegis_2026-04-14.json
+2026-04-14 21:22:26 | INFO     | Background watchdog started
+2026-04-14 21:22:26 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:22:26 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:22:26 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:22:56 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:22:56 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:22:56 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:23:26 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:23:26 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:23:26 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:23:32 | INFO     | Session log saved to C:\Users\fenci\OneDrive\Desktop\Aegis_Wireless\logs\aegis_2026-04-14.json
+2026-04-14 21:23:32 | INFO     | Background watchdog stopped
+2026-04-14 21:23:52 | INFO     | Session log saved to C:\Users\fenci\OneDrive\Desktop\Aegis_Wireless\logs\aegis_2026-04-14.json
+2026-04-14 21:23:52 | INFO     | Aegis tray mode exited
+2026-04-14 21:23:58 | INFO     | Background watchdog started
+2026-04-14 21:23:58 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:23:58 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:23:58 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:24:28 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:24:28 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:24:28 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:24:37 | INFO     | Session log saved to C:\Users\fenci\OneDrive\Desktop\Aegis_Wireless\logs\aegis_2026-04-14.json
+2026-04-14 21:24:37 | INFO     | Background watchdog stopped
+2026-04-14 21:27:07 | INFO     | Background watchdog started
+2026-04-14 21:27:07 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:27:07 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:27:07 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:27:29 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:27:29 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:27:29 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:27:37 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:27:37 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:27:37 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:27:56 | INFO     | Watchdog paused by user
+2026-04-14 21:43:42 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:43:42 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:43:42 | INFO     | Port scan on 127.0.0.1: 3 open out of 25 scanned
+2026-04-14 21:43:42 | INFO     |   Port   135 — MS-RPC (open)
+2026-04-14 21:43:42 | INFO     |   Port   445 — SMB (open)
+2026-04-14 21:43:42 | INFO     |   Port  3306 — MySQL (open)
+2026-04-14 21:43:42 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 84/100)
+2026-04-14 21:43:42 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 21:43:42 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 21:43:42 | INFO     | Full audit completed via dashboard
+2026-04-14 21:45:06 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:45:06 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:45:06 | INFO     | Port scan on 127.0.0.1: 3 open out of 25 scanned
+2026-04-14 21:45:06 | INFO     |   Port   135 — MS-RPC (open)
+2026-04-14 21:45:06 | INFO     |   Port   445 — SMB (open)
+2026-04-14 21:45:06 | INFO     |   Port  3306 — MySQL (open)
+2026-04-14 21:45:06 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 84/100)
+2026-04-14 21:45:06 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 21:45:06 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 21:45:06 | INFO     | Full audit completed via dashboard
+2026-04-14 21:46:16 | INFO     | Aegis Wireless session started
+2026-04-14 21:46:28 | INFO     | Session log saved to C:\Users\fenci\OneDrive\Desktop\Aegis_Wireless\logs\aegis_2026-04-14.json
+2026-04-14 21:46:36 | INFO     | Background watchdog started
+2026-04-14 21:46:36 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:46:36 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:46:36 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:47:06 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:47:06 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:47:06 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 21:47:27 | INFO     | Watchdog paused by user
+2026-04-14 21:47:57 | INFO     | Port scan on 127.0.0.1: 3 open out of 25 scanned
+2026-04-14 21:47:57 | INFO     |   Port   135 — MS-RPC (open)
+2026-04-14 21:47:57 | INFO     |   Port   445 — SMB (open)
+2026-04-14 21:47:57 | INFO     |   Port  3306 — MySQL (open)
+2026-04-14 21:48:05 | INFO     | Port scan on 127.0.0.1: 3 open out of 25 scanned
+2026-04-14 21:48:05 | INFO     |   Port   135 — MS-RPC (open)
+2026-04-14 21:48:05 | INFO     |   Port   445 — SMB (open)
+2026-04-14 21:48:05 | INFO     |   Port  3306 — MySQL (open)
+2026-04-14 21:48:08 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 21:48:08 | INFO     |   Network: MusicalFamily             Signal:   0%  Encryption: WPA2
+2026-04-14 21:48:08 | INFO     | Assessment: MusicalFamily — OK SAFE (Score: 100/100)
+2026-04-14 23:18:04 | INFO     | WiFi scan found 5 network(s)
+2026-04-14 23:18:04 | INFO     |   Network: WhiteSky-109Tower         Signal:  93%  Encryption: WPA2
+2026-04-14 23:18:04 | INFO     |   Network: Leasing Office            Signal:  80%  Encryption: WPA2
+2026-04-14 23:18:04 | INFO     |   Network: WhiteSky-PublicWiFi       Signal:  62%  Encryption: Open !! OPEN
+2026-04-14 23:18:04 | INFO     |   Network: DIRECT-EC-HP DeskJet 2800 series Signal:  35%  Encryption: WPA2
+2026-04-14 23:18:04 | INFO     |   Network: XFSETUP-73B7              Signal:  18%  Encryption: WPA2
+2026-04-14 23:18:04 | INFO     | Assessment: WhiteSky-109Tower — WARN MODERATE (Score: 50/100)
+2026-04-14 23:18:04 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:18:04 | INFO     | Assessment: Leasing Office — OK SAFE (Score: 100/100)
+2026-04-14 23:18:04 | INFO     | Assessment: WhiteSky-PublicWiFi — WARN MODERATE (Score: 60/100)
+2026-04-14 23:18:04 | INFO     |   [HIGH] Network has NO encryption — all traffic is visible to anyone nearby.
+2026-04-14 23:18:04 | INFO     | Assessment: DIRECT-EC-HP DeskJet 2800 series — OK SAFE (Score: 100/100)
+2026-04-14 23:18:04 | INFO     | Assessment: XFSETUP-73B7 — OK SAFE (Score: 100/100)
+2026-04-14 23:18:29 | INFO     | Port scan on 127.0.0.1: 2 open out of 25 scanned
+2026-04-14 23:18:29 | INFO     |   Port   135 — MS-RPC (open)
+2026-04-14 23:18:29 | INFO     |   Port   445 — SMB (open)
+2026-04-14 23:19:33 | INFO     | Background watchdog started
+2026-04-14 23:19:33 | INFO     | WiFi scan found 5 network(s)
+2026-04-14 23:19:33 | INFO     |   Network: WhiteSky-109Tower         Signal:  93%  Encryption: WPA2
+2026-04-14 23:19:33 | INFO     |   Network: Leasing Office            Signal:  80%  Encryption: WPA2
+2026-04-14 23:19:33 | INFO     |   Network: WhiteSky-PublicWiFi       Signal:  62%  Encryption: Open !! OPEN
+2026-04-14 23:19:33 | INFO     |   Network: DIRECT-EC-HP DeskJet 2800 series Signal:  35%  Encryption: WPA2
+2026-04-14 23:19:33 | INFO     |   Network: XFSETUP-73B7              Signal:  22%  Encryption: WPA2
+2026-04-14 23:19:33 | INFO     | Enforcement: WARNED on 'WhiteSky-109Tower' — Toast warning. Score: 50/100
+2026-04-14 23:19:33 | INFO     | Assessment: WhiteSky-109Tower — WARN MODERATE (Score: 50/100)
+2026-04-14 23:19:33 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:19:33 | INFO     | Assessment: Leasing Office — OK SAFE (Score: 100/100)
+2026-04-14 23:19:33 | INFO     | Enforcement: WARNED on 'WhiteSky-PublicWiFi' — Toast warning. Score: 60/100
+2026-04-14 23:19:33 | INFO     | Assessment: WhiteSky-PublicWiFi — WARN MODERATE (Score: 60/100)
+2026-04-14 23:19:33 | INFO     |   [HIGH] Network has NO encryption — all traffic is visible to anyone nearby.
+2026-04-14 23:19:33 | INFO     | Assessment: DIRECT-EC-HP DeskJet 2800 series — OK SAFE (Score: 100/100)
+2026-04-14 23:19:33 | INFO     | Assessment: XFSETUP-73B7 — OK SAFE (Score: 100/100)
+2026-04-14 23:20:04 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 23:20:04 | INFO     |   Network: WhiteSky-109Tower         Signal:  93%  Encryption: WPA2
+2026-04-14 23:20:04 | INFO     | Enforcement: WARNED on 'WhiteSky-109Tower' — Toast warning. Score: 50/100
+2026-04-14 23:20:04 | INFO     | Assessment: WhiteSky-109Tower — WARN MODERATE (Score: 50/100)
+2026-04-14 23:20:04 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:20:08 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 23:20:08 | INFO     |   Network: WhiteSky-109Tower         Signal:  93%  Encryption: WPA2
+2026-04-14 23:20:08 | INFO     | Enforcement: WARNED on 'WhiteSky-109Tower' — Toast warning. Score: 50/100
+2026-04-14 23:20:08 | INFO     | Assessment: WhiteSky-109Tower — WARN MODERATE (Score: 50/100)
+2026-04-14 23:20:08 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:20:34 | INFO     | WiFi scan found 1 network(s)
+2026-04-14 23:20:34 | INFO     |   Network: WhiteSky-109Tower         Signal:  93%  Encryption: WPA2
+2026-04-14 23:20:34 | INFO     | Enforcement: WARNED on 'WhiteSky-109Tower' — Toast warning. Score: 50/100
+2026-04-14 23:20:34 | INFO     | Assessment: WhiteSky-109Tower — WARN MODERATE (Score: 50/100)
+2026-04-14 23:20:34 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:20:39 | INFO     | Session log saved to C:\Users\rylan\Downloads\Test Enviorment\Aegis_Wireless\logs\aegis_2026-04-14.json
+2026-04-14 23:20:39 | INFO     | Background watchdog stopped
+2026-04-14 23:21:58 | INFO     | WiFi scan found 8 network(s)
+2026-04-14 23:21:58 | INFO     |   Network: WhiteSky-109Tower         Signal:  93%  Encryption: WPA2
+2026-04-14 23:21:58 | INFO     |   Network: Leasing Office            Signal:  60%  Encryption: WPA2
+2026-04-14 23:21:58 | INFO     |   Network: WhiteSky-PublicWiFi       Signal:  60%  Encryption: Open !! OPEN
+2026-04-14 23:21:58 | INFO     |   Network: DIRECT-EC-HP DeskJet 2800 series Signal:  33%  Encryption: WPA2
+2026-04-14 23:21:58 | INFO     |   Network: iHome                     Signal:  31%  Encryption: WPA2
+2026-04-14 23:21:58 | INFO     |   Network: <Hidden Network>          Signal:  26%  Encryption: WPA3
+2026-04-14 23:21:58 | INFO     |   Network: FamilyJarquinUrbina       Signal:  26%  Encryption: WPA2
+2026-04-14 23:21:58 | INFO     |   Network: New5G                     Signal:  16%  Encryption: WPA2
+2026-04-14 23:21:58 | INFO     | Port scan on 127.0.0.1: 2 open out of 25 scanned
+2026-04-14 23:21:58 | INFO     |   Port   135 — MS-RPC (open)
+2026-04-14 23:21:58 | INFO     |   Port   445 — SMB (open)
+2026-04-14 23:21:58 | INFO     | Assessment: WhiteSky-109Tower — ALERT DANGEROUS (Score: 34/100)
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:21:58 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:21:58 | INFO     | Assessment: Leasing Office — OK SAFE (Score: 84/100)
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:21:58 | INFO     | Assessment: WhiteSky-PublicWiFi — WARN MODERATE (Score: 44/100)
+2026-04-14 23:21:58 | INFO     |   [HIGH] Network has NO encryption — all traffic is visible to anyone nearby.
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:21:58 | INFO     | Assessment: DIRECT-EC-HP DeskJet 2800 series — OK SAFE (Score: 84/100)
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:21:58 | INFO     | Assessment: iHome — OK SAFE (Score: 84/100)
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:21:58 | INFO     | Assessment: <Hidden Network> — OK SAFE (Score: 74/100)
+2026-04-14 23:21:58 | INFO     |   [MEDIUM] Network is hiding its name (hidden SSID).
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:21:58 | INFO     | Assessment: FamilyJarquinUrbina — OK SAFE (Score: 84/100)
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:21:58 | INFO     | Assessment: New5G — OK SAFE (Score: 84/100)
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:21:58 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:21:58 | INFO     | Full audit completed via dashboard
+2026-04-14 23:36:14 | INFO     | WiFi scan found 7 network(s)
+2026-04-14 23:36:14 | INFO     |   Network: WhiteSky-109Tower         Signal:  92%  Encryption: WPA2
+2026-04-14 23:36:14 | INFO     |   Network: WhiteSky-PublicWiFi       Signal:  90%  Encryption: Open !! OPEN
+2026-04-14 23:36:14 | INFO     |   Network: Leasing Office            Signal:  82%  Encryption: WPA2
+2026-04-14 23:36:14 | INFO     |   Network: JMARS                     Signal:  57%  Encryption: WPA3
+2026-04-14 23:36:14 | INFO     |   Network: <Hidden Network>          Signal:  31%  Encryption: WPA2
+2026-04-14 23:36:14 | INFO     |   Network: Rodriguezwifi             Signal:  31%  Encryption: WPA2
+2026-04-14 23:36:14 | INFO     |   Network: TMOBILE-5A21              Signal:  22%  Encryption: WPA3
+2026-04-14 23:36:14 | INFO     | Assessment: WhiteSky-109Tower — WARN MODERATE (Score: 50/100)
+2026-04-14 23:36:14 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:36:14 | INFO     | Assessment: WhiteSky-PublicWiFi — WARN MODERATE (Score: 60/100)
+2026-04-14 23:36:14 | INFO     |   [HIGH] Network has NO encryption — all traffic is visible to anyone nearby.
+2026-04-14 23:36:14 | INFO     | Assessment: Leasing Office — OK SAFE (Score: 100/100)
+2026-04-14 23:36:14 | INFO     | Assessment: JMARS — OK SAFE (Score: 100/100)
+2026-04-14 23:36:14 | INFO     | Assessment: <Hidden Network> — OK SAFE (Score: 90/100)
+2026-04-14 23:36:14 | INFO     |   [MEDIUM] Network is hiding its name (hidden SSID).
+2026-04-14 23:36:14 | INFO     | Assessment: Rodriguezwifi — OK SAFE (Score: 100/100)
+2026-04-14 23:36:14 | INFO     | Assessment: TMOBILE-5A21 — OK SAFE (Score: 100/100)
+2026-04-14 23:36:23 | INFO     | Port scan on 127.0.0.1: 2 open out of 25 scanned
+2026-04-14 23:36:23 | INFO     |   Port   135 — MS-RPC (open)
+2026-04-14 23:36:23 | INFO     |   Port   445 — SMB (open)
+2026-04-14 23:36:25 | INFO     | WiFi scan found 7 network(s)
+2026-04-14 23:36:25 | INFO     |   Network: WhiteSky-109Tower         Signal:  92%  Encryption: WPA2
+2026-04-14 23:36:25 | INFO     |   Network: WhiteSky-PublicWiFi       Signal:  90%  Encryption: Open !! OPEN
+2026-04-14 23:36:25 | INFO     |   Network: Leasing Office            Signal:  82%  Encryption: WPA2
+2026-04-14 23:36:25 | INFO     |   Network: JMARS                     Signal:  57%  Encryption: WPA3
+2026-04-14 23:36:25 | INFO     |   Network: <Hidden Network>          Signal:  31%  Encryption: WPA2
+2026-04-14 23:36:25 | INFO     |   Network: Rodriguezwifi             Signal:  31%  Encryption: WPA2
+2026-04-14 23:36:25 | INFO     |   Network: TMOBILE-5A21              Signal:  22%  Encryption: WPA3
+2026-04-14 23:36:25 | INFO     | Assessment: WhiteSky-109Tower — WARN MODERATE (Score: 50/100)
+2026-04-14 23:36:25 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:36:25 | INFO     | Assessment: WhiteSky-PublicWiFi — WARN MODERATE (Score: 60/100)
+2026-04-14 23:36:25 | INFO     |   [HIGH] Network has NO encryption — all traffic is visible to anyone nearby.
+2026-04-14 23:36:25 | INFO     | Assessment: Leasing Office — OK SAFE (Score: 100/100)
+2026-04-14 23:36:25 | INFO     | Assessment: JMARS — OK SAFE (Score: 100/100)
+2026-04-14 23:36:25 | INFO     | Assessment: <Hidden Network> — OK SAFE (Score: 90/100)
+2026-04-14 23:36:25 | INFO     |   [MEDIUM] Network is hiding its name (hidden SSID).
+2026-04-14 23:36:25 | INFO     | Assessment: Rodriguezwifi — OK SAFE (Score: 100/100)
+2026-04-14 23:36:25 | INFO     | Assessment: TMOBILE-5A21 — OK SAFE (Score: 100/100)
+2026-04-14 23:36:27 | INFO     | WiFi scan found 7 network(s)
+2026-04-14 23:36:27 | INFO     |   Network: WhiteSky-109Tower         Signal:  92%  Encryption: WPA2
+2026-04-14 23:36:27 | INFO     |   Network: WhiteSky-PublicWiFi       Signal:  90%  Encryption: Open !! OPEN
+2026-04-14 23:36:27 | INFO     |   Network: Leasing Office            Signal:  82%  Encryption: WPA2
+2026-04-14 23:36:27 | INFO     |   Network: JMARS                     Signal:  57%  Encryption: WPA3
+2026-04-14 23:36:27 | INFO     |   Network: <Hidden Network>          Signal:  31%  Encryption: WPA2
+2026-04-14 23:36:27 | INFO     |   Network: Rodriguezwifi             Signal:  31%  Encryption: WPA2
+2026-04-14 23:36:27 | INFO     |   Network: TMOBILE-5A21              Signal:  22%  Encryption: WPA3
+2026-04-14 23:36:27 | INFO     | Assessment: WhiteSky-109Tower — WARN MODERATE (Score: 50/100)
+2026-04-14 23:36:27 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:36:27 | INFO     | Assessment: WhiteSky-PublicWiFi — WARN MODERATE (Score: 60/100)
+2026-04-14 23:36:27 | INFO     |   [HIGH] Network has NO encryption — all traffic is visible to anyone nearby.
+2026-04-14 23:36:27 | INFO     | Assessment: Leasing Office — OK SAFE (Score: 100/100)
+2026-04-14 23:36:27 | INFO     | Assessment: JMARS — OK SAFE (Score: 100/100)
+2026-04-14 23:36:27 | INFO     | Assessment: <Hidden Network> — OK SAFE (Score: 90/100)
+2026-04-14 23:36:27 | INFO     |   [MEDIUM] Network is hiding its name (hidden SSID).
+2026-04-14 23:36:27 | INFO     | Assessment: Rodriguezwifi — OK SAFE (Score: 100/100)
+2026-04-14 23:36:27 | INFO     | Assessment: TMOBILE-5A21 — OK SAFE (Score: 100/100)
+2026-04-14 23:36:31 | INFO     | WiFi scan found 7 network(s)
+2026-04-14 23:36:31 | INFO     |   Network: WhiteSky-109Tower         Signal:  92%  Encryption: WPA2
+2026-04-14 23:36:31 | INFO     |   Network: WhiteSky-PublicWiFi       Signal:  90%  Encryption: Open !! OPEN
+2026-04-14 23:36:31 | INFO     |   Network: Leasing Office            Signal:  82%  Encryption: WPA2
+2026-04-14 23:36:31 | INFO     |   Network: JMARS                     Signal:  57%  Encryption: WPA3
+2026-04-14 23:36:31 | INFO     |   Network: <Hidden Network>          Signal:  31%  Encryption: WPA2
+2026-04-14 23:36:31 | INFO     |   Network: Rodriguezwifi             Signal:  31%  Encryption: WPA2
+2026-04-14 23:36:31 | INFO     |   Network: TMOBILE-5A21              Signal:  22%  Encryption: WPA3
+2026-04-14 23:36:31 | INFO     | Port scan on 127.0.0.1: 2 open out of 25 scanned
+2026-04-14 23:36:31 | INFO     |   Port   135 — MS-RPC (open)
+2026-04-14 23:36:31 | INFO     |   Port   445 — SMB (open)
+2026-04-14 23:36:31 | INFO     | Assessment: WhiteSky-109Tower — ALERT DANGEROUS (Score: 34/100)
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:36:31 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:36:31 | INFO     | Assessment: WhiteSky-PublicWiFi — WARN MODERATE (Score: 44/100)
+2026-04-14 23:36:31 | INFO     |   [HIGH] Network has NO encryption — all traffic is visible to anyone nearby.
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:36:31 | INFO     | Assessment: Leasing Office — OK SAFE (Score: 84/100)
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:36:31 | INFO     | Assessment: JMARS — OK SAFE (Score: 84/100)
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:36:31 | INFO     | Assessment: <Hidden Network> — OK SAFE (Score: 74/100)
+2026-04-14 23:36:31 | INFO     |   [MEDIUM] Network is hiding its name (hidden SSID).
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:36:31 | INFO     | Assessment: Rodriguezwifi — OK SAFE (Score: 84/100)
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:36:31 | INFO     | Assessment: TMOBILE-5A21 — OK SAFE (Score: 84/100)
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 135 (MS-RPC) is open. Windows RPC — common attack target
+2026-04-14 23:36:31 | INFO     |   [HIGH] Port 445 (SMB) is open. Windows file sharing — ransomware vector
+2026-04-14 23:36:31 | INFO     | Full audit completed via dashboard
+2026-04-14 23:36:35 | INFO     | WiFi scan found 7 network(s)
+2026-04-14 23:36:35 | INFO     |   Network: WhiteSky-109Tower         Signal:  92%  Encryption: WPA2
+2026-04-14 23:36:35 | INFO     |   Network: WhiteSky-PublicWiFi       Signal:  90%  Encryption: Open !! OPEN
+2026-04-14 23:36:35 | INFO     |   Network: Leasing Office            Signal:  82%  Encryption: WPA2
+2026-04-14 23:36:35 | INFO     |   Network: JMARS                     Signal:  57%  Encryption: WPA3
+2026-04-14 23:36:35 | INFO     |   Network: <Hidden Network>          Signal:  31%  Encryption: WPA2
+2026-04-14 23:36:35 | INFO     |   Network: Rodriguezwifi             Signal:  31%  Encryption: WPA2
+2026-04-14 23:36:35 | INFO     |   Network: TMOBILE-5A21              Signal:  22%  Encryption: WPA3
+2026-04-14 23:36:35 | INFO     | Assessment: WhiteSky-109Tower — WARN MODERATE (Score: 50/100)
+2026-04-14 23:36:35 | INFO     |   [HIGH] You previously marked this network as UNSAFE.
+2026-04-14 23:36:35 | INFO     | Assessment: WhiteSky-PublicWiFi — WARN MODERATE (Score: 60/100)
+2026-04-14 23:36:35 | INFO     |   [HIGH] Network has NO encryption — all traffic is visible to anyone nearby.
+2026-04-14 23:36:35 | INFO     | Assessment: Leasing Office — OK SAFE (Score: 100/100)
+2026-04-14 23:36:35 | INFO     | Assessment: JMARS — OK SAFE (Score: 100/100)
+2026-04-14 23:36:35 | INFO     | Assessment: <Hidden Network> — OK SAFE (Score: 90/100)
+2026-04-14 23:36:35 | INFO     |   [MEDIUM] Network is hiding its name (hidden SSID).
+2026-04-14 23:36:35 | INFO     | Assessment: Rodriguezwifi — OK SAFE (Score: 100/100)
+2026-04-14 23:36:35 | INFO     | Assessment: TMOBILE-5A21 — OK SAFE (Score: 100/100)

@@ -80,8 +80,8 @@ class AegisWireless:
         self.wifi_scanner = WiFiScanner()
         self.port_scanner = PortScanner()
         self.risk_engine = RiskEngine()
-        self.blacklist = BlacklistManager()
         self.enforcer = NetworkEnforcer()
+        self.blacklist = BlacklistManager(enforcer=self.enforcer)
         self.logger = AegisLogger()
 
         self.last_wifi_results = []

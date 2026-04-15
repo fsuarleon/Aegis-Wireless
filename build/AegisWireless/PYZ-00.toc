@@ -1,4 +1,5 @@
-('C:\\Users\\rylan\\downloads\\Aegis_Wireless\\build\\AegisWireless\\PYZ-00.pyz',
+('C:\\Users\\rylan\\Downloads\\Test '
+ 'Enviorment\\Aegis_Wireless\\build\\AegisWireless\\PYZ-00.pyz',
  [('PIL',
    'C:\\Users\\rylan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\PIL\\__init__.py',
    'PYMODULE'),
@@ -287,10 +288,12 @@
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_threading_local.py',
    'PYMODULE'),
   ('api',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\api\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\api\\__init__.py',
    'PYMODULE'),
   ('api.telemetry',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\api\\telemetry.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\api\\telemetry.py',
    'PYMODULE'),
   ('argparse',
    'C:\\Program '
@@ -353,13 +356,16 @@
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\copy.py',
    'PYMODULE'),
   ('core',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\core\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\core\\__init__.py',
    'PYMODULE'),
   ('core.blacklist',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\core\\blacklist.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\core\\blacklist.py',
    'PYMODULE'),
   ('core.engine',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\core\\engine.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\core\\engine.py',
    'PYMODULE'),
   ('csv',
    'C:\\Program '
@@ -746,13 +752,20 @@
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\netrc.py',
    'PYMODULE'),
   ('network',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\network\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\network\\__init__.py',
    'PYMODULE'),
   ('network.enforcement',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\network\\enforcement.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\network\\enforcement.py',
+   'PYMODULE'),
+  ('network.monitor',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\network\\monitor.py',
    'PYMODULE'),
   ('network.vpn_tunnel',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\network\\vpn_tunnel.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\network\\vpn_tunnel.py',
    'PYMODULE'),
   ('nturl2path',
    'C:\\Program '
@@ -968,13 +981,16 @@
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\runpy.py',
    'PYMODULE'),
   ('scanner',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\scanner\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\scanner\\__init__.py',
    'PYMODULE'),
   ('scanner.port_probe',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\scanner\\port_probe.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\scanner\\port_probe.py',
    'PYMODULE'),
   ('scanner.wifi_scan',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\scanner\\wifi_scan.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\scanner\\wifi_scan.py',
    'PYMODULE'),
   ('secrets',
    'C:\\Program '
@@ -1060,16 +1076,19 @@
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\typing.py',
    'PYMODULE'),
   ('ui',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\ui\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\ui\\__init__.py',
    'PYMODULE'),
   ('ui.notifications',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\ui\\notifications.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\ui\\notifications.py',
    'PYMODULE'),
   ('ui.startup',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\ui\\startup.py',
+   'C:\\Users\\rylan\\Downloads\\Test '
+   'Enviorment\\Aegis_Wireless\\ui\\startup.py',
    'PYMODULE'),
   ('ui.tray',
-   'C:\\Users\\rylan\\downloads\\Aegis_Wireless\\ui\\tray.py',
+   'C:\\Users\\rylan\\Downloads\\Test Enviorment\\Aegis_Wireless\\ui\\tray.py',
    'PYMODULE'),
   ('urllib',
    'C:\\Program '

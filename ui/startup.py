@@ -13,6 +13,10 @@ SUPPORTED PLATFORMS:
 HOW IT WORKS:
     Call `StartupManager.enable()` once and the app will launch in
     system-tray mode on every login.  Call `.disable()` to undo.
+
+    The module is deliberately defensive — every operation is
+    wrapped in try/except so a startup-registration failure never
+    crashes the main application.
 """
 
 import os
@@ -43,7 +47,11 @@ class StartupManager:
 
     @classmethod
     def enable(cls) -> bool:
-        """Register Aegis to start on login. Returns True on success."""
+        """
+        Register Aegis to start on login.
+
+        Returns True on success, False on failure.
+        """
         system = platform.system()
         try:
             if system == "Windows":
@@ -67,7 +75,11 @@ class StartupManager:
 
     @classmethod
     def disable(cls) -> bool:
-        """Remove Aegis from login startup. Returns True on success."""
+        """
+        Remove Aegis from login startup.
+
+        Returns True on success, False on failure.
+        """
         system = platform.system()
         try:
             if system == "Windows":
@@ -112,24 +124,17 @@ class StartupManager:
         """
         Build the shell command to start Aegis in tray mode.
 
-        On Windows: uses pythonw.exe + aegis_tray.pyw (no console)
-        On macOS/Linux: uses python + main.py --tray
+        Uses the current Python interpreter and the main.py entry
+        point with the --tray flag so it boots headless.
         """
-        if platform.system() == "Windows":
-            # Use pythonw.exe for windowless launch
-            python = sys.executable
-            pythonw = python.replace("python.exe", "pythonw.exe")
-            if not os.path.isfile(pythonw):
-                pythonw = python   # Fallback
-            launcher = str(_APP_DIR / "aegis_tray.pyw")
-            return f'"{pythonw}" "{launcher}"'
-        else:
-            python = sys.executable
-            main_py = str(_APP_DIR / "main.py")
-            return f'"{python}" "{main_py}" --tray'
+        python = sys.executable
+        main_py = str(_APP_DIR / "main.py")
+        # Quote paths in case they contain spaces
+        return f'"{python}" "{main_py}" --tray'
 
     # ─────────────────────────────────────────────────────────
-    #  Windows — Registry
+    #  Windows — Registry: HKCU\Software\Microsoft\Windows\
+    #            CurrentVersion\Run
     # ─────────────────────────────────────────────────────────
 
     @classmethod
@@ -164,7 +169,7 @@ class StartupManager:
             winreg.CloseKey(key)
             return True
         except FileNotFoundError:
-            return True
+            return True   # Already removed
         except OSError as exc:
             logger.error("Windows registry delete failed: %s", exc)
             return False
@@ -193,7 +198,7 @@ class StartupManager:
         return (
             Path.home()
             / "Library" / "LaunchAgents"
-            / "com.aegis.wireless.plist"
+            / f"com.aegis.wireless.plist"
         )
 
     @classmethod
@@ -225,6 +230,7 @@ class StartupManager:
 </plist>
 """
         plist.write_text(content, encoding="utf-8")
+        logger.info("Created LaunchAgent: %s", plist)
         return True
 
     @classmethod
@@ -239,7 +245,7 @@ class StartupManager:
         return cls._plist_path().exists()
 
     # ─────────────────────────────────────────────────────────
-    #  Linux — XDG Autostart
+    #  Linux — XDG Autostart (.desktop file)
     # ─────────────────────────────────────────────────────────
 
     @classmethod
@@ -269,6 +275,7 @@ StartupNotify=false
 X-GNOME-Autostart-enabled=true
 """
         desktop.write_text(content, encoding="utf-8")
+        logger.info("Created autostart entry: %s", desktop)
         return True
 
     @classmethod

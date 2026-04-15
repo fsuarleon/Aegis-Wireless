@@ -30,6 +30,7 @@ import subprocess
 import platform
 import logging
 from pathlib import Path
+from network.monitor import ConnectionMonitor
 
 logger = logging.getLogger("aegis.tray")
 
@@ -134,6 +135,16 @@ class AegisTray:
     """
     System tray wrapper. Minimal for users, full-featured for admins.
     All behavior driven by config/settings.json.
+
+    On startup:
+    1. Creates the enforcer
+    2. Passes it to the blacklist manager so add/remove
+       trigger OS-level blocks automatically
+    3. Repairs any blacklist data inconsistency (entries vs
+       blacklisted_networks desync)
+    4. Syncs all blacklisted networks to OS-level blocks
+    5. Loads IT-defined blocked_ssids into the blacklist
+    6. Starts the connection monitor
     """
 
     def __init__(self):
@@ -146,9 +157,17 @@ class AegisTray:
         self.wifi_scanner = WiFiScanner()
         self.port_scanner = PortScanner()
         self.risk_engine = RiskEngine()
-        self.blacklist = BlacklistManager()
         self.enforcer = NetworkEnforcer()
         self.logger = AegisLogger()
+
+        # ── Blacklist with enforcer attached ──
+        # The enforcer is passed to the blacklist so that
+        # every add() triggers an OS-level block, and every
+        # remove() lifts it.
+        # NOTE: BlacklistManager._load() also repairs any
+        # desync between entries and blacklisted_networks
+        # (the root cause of the WhiteSky-109Tower bug).
+        self.blacklist = BlacklistManager(enforcer=self.enforcer)
 
         # ── State ──
         self._scanning = False
@@ -160,8 +179,23 @@ class AegisTray:
         for ssid in self.policy.get("blocked_ssids", []):
             self.blacklist.add(ssid, reason="Blocked by IT policy")
 
+        # ── Sync all blacklisted networks to OS-level blocks ──
+        # This ensures that even if the app was closed and
+        # networks were added to blacklist.json manually,
+        # they will be enforced at the OS level.
+        self.blacklist.sync_os_blocks()
+
         # ── Load notification policy ──
         NotificationManager.load_policy()
+
+        self.monitor = ConnectionMonitor(
+            wifi_scanner=self.wifi_scanner,
+            risk_engine=self.risk_engine,
+            blacklist=self.blacklist,
+            enforcer=self.enforcer,
+            aegis_logger=self.logger,
+            policy=self.policy,
+        )
 
     # ─────────────────────────────────────────────────────────
     #  Build the context menu
@@ -277,6 +311,7 @@ class AegisTray:
             self._start_periodic_scan(interval)
 
         logger.info("System tray icon running.")
+        self.monitor.start()
         self._icon.run()
 
     def _start_periodic_scan(self, interval_minutes: int):
@@ -558,3 +593,4 @@ class AegisTray:
         self.logger.save_session()
         self.logger.log_message("Aegis tray mode exited")
         icon.stop()
+        self.monitor.stop()

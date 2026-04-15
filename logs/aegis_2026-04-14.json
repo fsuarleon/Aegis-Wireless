@@ -99,8 +99,32 @@
     "blacklist_changes": []
   },
   {
-    "session_start": "2026-04-14T15:53:11.226931",
-    "session_end": "2026-04-14T15:53:19.907117",
+    "session_start": "2026-04-14T17:16:59.329781",
+    "session_end": "2026-04-14T17:17:36.609516",
+    "wifi_scans": [
+      {
+        "timestamp": "2026-04-14T17:17:17.366868",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "MusicalFamily",
+            "signal_strength": 0,
+            "encryption": "WPA2",
+            "bssid": "",
+            "channel": 0,
+            "band": ""
+          }
+        ]
+      }
+    ],
+    "port_scans": [],
+    "assessments": [],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T21:14:58.092720",
+    "session_end": "2026-04-14T21:15:05.813064",
     "wifi_scans": [],
     "port_scans": [],
     "assessments": [],
@@ -108,8 +132,223 @@
     "blacklist_changes": []
   },
   {
-    "session_start": "2026-04-14T15:55:18.106380",
-    "session_end": "2026-04-14T15:55:26.036772",
+    "session_start": "2026-04-14T21:22:26.021525",
+    "session_end": "2026-04-14T21:23:32.840597",
+    "wifi_scans": [
+      {
+        "timestamp": "2026-04-14T21:22:26.338976",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "MusicalFamily",
+            "signal_strength": 0,
+            "encryption": "WPA2",
+            "bssid": "",
+            "channel": 0,
+            "band": ""
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-14T21:22:56.588195",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "MusicalFamily",
+            "signal_strength": 0,
+            "encryption": "WPA2",
+            "bssid": "",
+            "channel": 0,
+            "band": ""
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-14T21:23:26.838280",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "MusicalFamily",
+            "signal_strength": 0,
+            "encryption": "WPA2",
+            "bssid": "",
+            "channel": 0,
+            "band": ""
+          }
+        ]
+      }
+    ],
+    "port_scans": [],
+    "assessments": [
+      {
+        "timestamp": "2026-04-14T21:22:26.339261",
+        "ssid": "MusicalFamily",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'MusicalFamily' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T21:22:56.588656",
+        "ssid": "MusicalFamily",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'MusicalFamily' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T21:23:26.838572",
+        "ssid": "MusicalFamily",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'MusicalFamily' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      }
+    ],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T15:51:24.510356",
+    "session_end": "2026-04-14T21:23:52.254660",
+    "wifi_scans": [
+      {
+        "timestamp": "2026-04-14T21:09:17.180347",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "MusicalFamily",
+            "signal_strength": 0,
+            "encryption": "WPA2",
+            "bssid": "",
+            "channel": 0,
+            "band": ""
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-14T21:09:41.484920",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "MusicalFamily",
+            "signal_strength": 0,
+            "encryption": "WPA2",
+            "bssid": "",
+            "channel": 0,
+            "band": ""
+          }
+        ]
+      }
+    ],
+    "port_scans": [],
+    "assessments": [
+      {
+        "timestamp": "2026-04-14T21:09:17.180689",
+        "ssid": "MusicalFamily",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'MusicalFamily' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T21:09:41.485306",
+        "ssid": "MusicalFamily",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'MusicalFamily' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      }
+    ],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T21:23:58.301865",
+    "session_end": "2026-04-14T21:24:37.846985",
+    "wifi_scans": [
+      {
+        "timestamp": "2026-04-14T21:23:58.608450",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "MusicalFamily",
+            "signal_strength": 0,
+            "encryption": "WPA2",
+            "bssid": "",
+            "channel": 0,
+            "band": ""
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-14T21:24:28.842824",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "MusicalFamily",
+            "signal_strength": 0,
+            "encryption": "WPA2",
+            "bssid": "",
+            "channel": 0,
+            "band": ""
+          }
+        ]
+      }
+    ],
+    "port_scans": [],
+    "assessments": [
+      {
+        "timestamp": "2026-04-14T21:23:58.608768",
+        "ssid": "MusicalFamily",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'MusicalFamily' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T21:24:28.843165",
+        "ssid": "MusicalFamily",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'MusicalFamily' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      }
+    ],
+    "enforcement_actions": [],
+    "blacklist_changes": []
+  },
+  {
+    "session_start": "2026-04-14T21:46:16.035646",
+    "session_end": "2026-04-14T21:46:28.513731",
     "wifi_scans": [],
     "port_scans": [],
     "assessments": [],
@@ -117,75 +356,269 @@
     "blacklist_changes": []
   },
   {
-    "session_start": "2026-04-14T15:55:47.352782",
-    "session_end": "2026-04-14T15:55:51.013981",
-    "wifi_scans": [],
+    "session_start": "2026-04-14T23:19:33.375373",
+    "session_end": "2026-04-14T23:20:39.683852",
+    "wifi_scans": [
+      {
+        "timestamp": "2026-04-14T23:19:33.888035",
+        "network_count": 5,
+        "networks": [
+          {
+            "ssid": "WhiteSky-109Tower",
+            "signal_strength": 93,
+            "encryption": "WPA2",
+            "bssid": "a8:f7:d9:bc:19:13",
+            "channel": 11,
+            "band": "2.4 GHz"
+          },
+          {
+            "ssid": "Leasing Office",
+            "signal_strength": 80,
+            "encryption": "WPA2",
+            "bssid": "a8:f7:d9:bc:5b:c1",
+            "channel": 27,
+            "band": "5 GHz"
+          },
+          {
+            "ssid": "WhiteSky-PublicWiFi",
+            "signal_strength": 62,
+            "encryption": "Open",
+            "bssid": "a8:f7:d9:2c:f3:e2",
+            "channel": 66,
+            "band": "5 GHz"
+          },
+          {
+            "ssid": "DIRECT-EC-HP DeskJet 2800 series",
+            "signal_strength": 35,
+            "encryption": "WPA2",
+            "bssid": "10:b6:76:08:b7:ed",
+            "channel": 11,
+            "band": "2.4 GHz"
+          },
+          {
+            "ssid": "XFSETUP-73B7",
+            "signal_strength": 22,
+            "encryption": "WPA2",
+            "bssid": "3c:b7:4b:f7:73:c3",
+            "channel": 157,
+            "band": "5 GHz"
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-14T23:20:04.330023",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "WhiteSky-109Tower",
+            "signal_strength": 93,
+            "encryption": "WPA2",
+            "bssid": "a8:f7:d9:bc:19:13",
+            "channel": 110,
+            "band": "5 GHz"
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-14T23:20:08.319119",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "WhiteSky-109Tower",
+            "signal_strength": 93,
+            "encryption": "WPA2",
+            "bssid": "a8:f7:d9:bc:19:13",
+            "channel": 24,
+            "band": "5 GHz"
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-04-14T23:20:34.675836",
+        "network_count": 1,
+        "networks": [
+          {
+            "ssid": "WhiteSky-109Tower",
+            "signal_strength": 93,
+            "encryption": "WPA2",
+            "bssid": "a8:f7:d9:bc:19:13",
+            "channel": 31,
+            "band": "5 GHz"
+          }
+        ]
+      }
+    ],
     "port_scans": [],
-    "assessments": [],
-    "enforcement_actions": [],
-    "blacklist_changes": []
-  },
-  {
-    "session_start": "2026-04-14T15:56:31.901494",
-    "session_end": "2026-04-14T15:56:43.436740",
-    "wifi_scans": [],
-    "port_scans": [],
-    "assessments": [],
-    "enforcement_actions": [],
-    "blacklist_changes": []
-  },
-  {
-    "session_start": "2026-04-14T16:04:50.695091",
-    "session_end": "2026-04-14T16:05:00.273690",
-    "wifi_scans": [],
-    "port_scans": [],
-    "assessments": [],
-    "enforcement_actions": [],
-    "blacklist_changes": []
-  },
-  {
-    "session_start": "2026-04-14T16:09:26.401209",
-    "session_end": "2026-04-14T16:09:30.555697",
-    "wifi_scans": [],
-    "port_scans": [],
-    "assessments": [],
-    "enforcement_actions": [],
-    "blacklist_changes": []
-  },
-  {
-    "session_start": "2026-04-14T16:10:16.062844",
-    "session_end": "2026-04-14T16:10:22.563252",
-    "wifi_scans": [],
-    "port_scans": [],
-    "assessments": [],
-    "enforcement_actions": [],
-    "blacklist_changes": []
-  },
-  {
-    "session_start": "2026-04-14T16:36:33.534552",
-    "session_end": "2026-04-14T16:37:20.491927",
-    "wifi_scans": [],
-    "port_scans": [],
-    "assessments": [],
-    "enforcement_actions": [],
-    "blacklist_changes": []
-  },
-  {
-    "session_start": "2026-04-14T16:40:02.302176",
-    "session_end": "2026-04-14T16:40:07.156486",
-    "wifi_scans": [],
-    "port_scans": [],
-    "assessments": [],
-    "enforcement_actions": [],
-    "blacklist_changes": []
-  },
-  {
-    "session_start": "2026-04-14T16:51:16.501724",
-    "session_end": "2026-04-14T16:52:59.366011",
-    "wifi_scans": [],
-    "port_scans": [],
-    "assessments": [],
-    "enforcement_actions": [],
+    "assessments": [
+      {
+        "timestamp": "2026-04-14T23:19:33.895163",
+        "ssid": "WhiteSky-109Tower",
+        "encryption": "WPA2",
+        "safety_score": 50,
+        "risk_level": "MODERATE",
+        "is_blacklisted": true,
+        "summary": "Network 'WhiteSky-109Tower' has moderate risk (score: 50/100). 1 issue(s) detected. Use a VPN if possible and avoid online banking or entering passwords.",
+        "finding_count": 1,
+        "findings": [
+          {
+            "category": "blacklist",
+            "severity": "high",
+            "description": "You previously marked this network as UNSAFE.",
+            "penalty": 50,
+            "recommendation": "Do NOT connect. You flagged this network for a reason."
+          }
+        ],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T23:19:33.907254",
+        "ssid": "Leasing Office",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'Leasing Office' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T23:19:33.915146",
+        "ssid": "WhiteSky-PublicWiFi",
+        "encryption": "Open",
+        "safety_score": 60,
+        "risk_level": "MODERATE",
+        "is_blacklisted": false,
+        "summary": "Network 'WhiteSky-PublicWiFi' has moderate risk (score: 60/100). 1 issue(s) detected. Use a VPN if possible and avoid online banking or entering passwords.",
+        "finding_count": 1,
+        "findings": [
+          {
+            "category": "encryption",
+            "severity": "high",
+            "description": "Network has NO encryption \u2014 all traffic is visible to anyone nearby.",
+            "penalty": 40,
+            "recommendation": "AVOID this network or use a VPN. Never enter passwords or banking info."
+          }
+        ],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T23:19:33.916967",
+        "ssid": "DIRECT-EC-HP DeskJet 2800 series",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'DIRECT-EC-HP DeskJet 2800 series' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T23:19:33.918948",
+        "ssid": "XFSETUP-73B7",
+        "encryption": "WPA2",
+        "safety_score": 100,
+        "risk_level": "SAFE",
+        "is_blacklisted": false,
+        "summary": "Network 'XFSETUP-73B7' appears safe (score: 100/100). No issues detected. Standard precautions apply.",
+        "finding_count": 0,
+        "findings": [],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T23:20:04.331367",
+        "ssid": "WhiteSky-109Tower",
+        "encryption": "WPA2",
+        "safety_score": 50,
+        "risk_level": "MODERATE",
+        "is_blacklisted": true,
+        "summary": "Network 'WhiteSky-109Tower' has moderate risk (score: 50/100). 1 issue(s) detected. Use a VPN if possible and avoid online banking or entering passwords.",
+        "finding_count": 1,
+        "findings": [
+          {
+            "category": "blacklist",
+            "severity": "high",
+            "description": "You previously marked this network as UNSAFE.",
+            "penalty": 50,
+            "recommendation": "Do NOT connect. You flagged this network for a reason."
+          }
+        ],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T23:20:08.322539",
+        "ssid": "WhiteSky-109Tower",
+        "encryption": "WPA2",
+        "safety_score": 50,
+        "risk_level": "MODERATE",
+        "is_blacklisted": true,
+        "summary": "Network 'WhiteSky-109Tower' has moderate risk (score: 50/100). 1 issue(s) detected. Use a VPN if possible and avoid online banking or entering passwords.",
+        "finding_count": 1,
+        "findings": [
+          {
+            "category": "blacklist",
+            "severity": "high",
+            "description": "You previously marked this network as UNSAFE.",
+            "penalty": 50,
+            "recommendation": "Do NOT connect. You flagged this network for a reason."
+          }
+        ],
+        "open_ports": []
+      },
+      {
+        "timestamp": "2026-04-14T23:20:34.680297",
+        "ssid": "WhiteSky-109Tower",
+        "encryption": "WPA2",
+        "safety_score": 50,
+        "risk_level": "MODERATE",
+        "is_blacklisted": true,
+        "summary": "Network 'WhiteSky-109Tower' has moderate risk (score: 50/100). 1 issue(s) detected. Use a VPN if possible and avoid online banking or entering passwords.",
+        "finding_count": 1,
+        "findings": [
+          {
+            "category": "blacklist",
+            "severity": "high",
+            "description": "You previously marked this network as UNSAFE.",
+            "penalty": 50,
+            "recommendation": "Do NOT connect. You flagged this network for a reason."
+          }
+        ],
+        "open_ports": []
+      }
+    ],
+    "enforcement_actions": [
+      {
+        "timestamp": "2026-04-14T23:19:33.892447",
+        "action": "warned",
+        "ssid": "WhiteSky-109Tower",
+        "details": "Toast warning. Score: 50/100"
+      },
+      {
+        "timestamp": "2026-04-14T23:19:33.912192",
+        "action": "warned",
+        "ssid": "WhiteSky-PublicWiFi",
+        "details": "Toast warning. Score: 60/100"
+      },
+      {
+        "timestamp": "2026-04-14T23:20:04.330594",
+        "action": "warned",
+        "ssid": "WhiteSky-109Tower",
+        "details": "Toast warning. Score: 50/100"
+      },
+      {
+        "timestamp": "2026-04-14T23:20:08.320214",
+        "action": "warned",
+        "ssid": "WhiteSky-109Tower",
+        "details": "Toast warning. Score: 50/100"
+      },
+      {
+        "timestamp": "2026-04-14T23:20:34.677151",
+        "action": "warned",
+        "ssid": "WhiteSky-109Tower",
+        "details": "Toast warning. Score: 50/100"
+      }
+    ],
     "blacklist_changes": []
   }
 ]
