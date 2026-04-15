@@ -1,6 +1,6 @@
 @echo off
 setlocal EnableDelayedExpansion
-title Aegis Wireless — One-Click Installer
+title Aegis Wireless Installer
 color 0B
 cd /d "%~dp0"
 
