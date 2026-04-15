@@ -6,7 +6,7 @@ cd /d "%~dp0"
 
 echo.
 echo  =============================================
-echo       AEGIS WIRELESS — ONE-CLICK INSTALLER
+echo       AEGIS WIRELESS INSTALLER
 echo       WiFi Security Analysis Tool
 echo  =============================================
 echo.
