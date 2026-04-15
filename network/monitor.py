@@ -16,10 +16,13 @@ WHAT THIS DOES:
            NO  → Run a full policy scan:
                a) Check encryption against minimum_encryption
                b) Check if open networks are allowed
-               c) Run risk engine analysis
-               d) Check safety score against max_acceptable_risk_score
-               e) PASS → toast: "Connected safely to <network>"
-               f) FAIL → Add to blacklist (+ OS-level block),
+               c) Port-scan the default gateway for dangerous
+                  services (multi-threaded, quick scan)
+               d) Run risk engine analysis (with port data
+                  and 802.11 frame validation results)
+               e) Check safety score against max_acceptable_risk_score
+               f) PASS → toast: "Connected safely to <network>"
+               g) FAIL → Add to blacklist (+ OS-level block),
                          disconnect, toast alert.
 
     2. DISCONNECTION DETECTED:
@@ -69,11 +72,13 @@ class ConnectionMonitor:
     - Trusted SSID check (instant allow)
     - Encryption minimum check (from settings.json)
     - Open network check (from settings.json)
+    - Port scan of default gateway
     - Full risk engine analysis + score threshold
     """
 
     def __init__(self, wifi_scanner, risk_engine, blacklist,
-                 enforcer, aegis_logger, policy: dict):
+                 enforcer, aegis_logger, policy: dict,
+                 port_scanner=None):
         """
         Args:
             wifi_scanner:  WiFiScanner instance
@@ -82,6 +87,7 @@ class ConnectionMonitor:
             enforcer:      NetworkEnforcer instance
             aegis_logger:  AegisLogger instance
             policy:        Policy dict from settings.json
+            port_scanner:  PortScanner instance (optional)
         """
         self.wifi_scanner = wifi_scanner
         self.risk_engine = risk_engine
@@ -89,6 +95,7 @@ class ConnectionMonitor:
         self.enforcer = enforcer
         self.logger = aegis_logger
         self.policy = policy
+        self.port_scanner = port_scanner
 
         self.os_type = platform.system()
         self._running = False
@@ -186,8 +193,9 @@ class ConnectionMonitor:
         3. WiFi scan + policy checks:
            a. Open network check
            b. Minimum encryption check
-           c. Risk engine analysis
-           d. Score threshold check
+           c. Port scan of default gateway
+           d. Risk engine analysis (with port data)
+           e. Score threshold check
         4. PASS → allow + notify
         5. FAIL → blacklist + OS-block + disconnect + notify
         """
@@ -296,10 +304,34 @@ class ConnectionMonitor:
                     )
                     return
 
-                # ── 3c: Full risk engine analysis ──
-                assessment = self.risk_engine.analyze(target_net)
+                # ── 3c: Port scan of default gateway ──
+                port_report = None
+                if self.port_scanner:
+                    try:
+                        gateway = self._get_default_gateway()
+                        if gateway:
+                            logger.info(
+                                "Port-scanning gateway %s ...",
+                                gateway,
+                            )
+                            port_report = (
+                                self.port_scanner.quick_scan(gateway)
+                            )
+                            if port_report:
+                                self.logger.log_port_scan(
+                                    port_report.to_dict()
+                                )
+                    except Exception as exc:
+                        logger.warning(
+                            "Gateway port scan failed: %s", exc
+                        )
 
-                # ── 3d: Score threshold check ──
+                # ── 3d: Full risk engine analysis ──
+                assessment = self.risk_engine.analyze(
+                    target_net, port_report=port_report
+                )
+
+                # ── 3e: Score threshold check ──
                 max_score = self.policy.get(
                     "max_acceptable_risk_score", 40
                 )
@@ -429,6 +461,75 @@ class ConnectionMonitor:
 
         # Toast notification
         NotificationManager.connection_blocked(ssid, detail)
+
+    # ─────────────────────────────────────────────────────────
+    #  Get default gateway IP for port scanning
+    # ─────────────────────────────────────────────────────────
+
+    def _get_default_gateway(self) -> Optional[str]:
+        """
+        Detect the default gateway IP of the current network.
+        Used as the target for the automatic port scan.
+
+        Returns:
+            Gateway IP string (e.g. "192.168.1.1") or None.
+        """
+        try:
+            cflags = (
+                subprocess.CREATE_NO_WINDOW
+                if hasattr(subprocess, "CREATE_NO_WINDOW")
+                else 0
+            )
+
+            if self.os_type == "Windows":
+                result = subprocess.run(
+                    ["ipconfig"],
+                    capture_output=True, text=True, timeout=10,
+                    creationflags=cflags,
+                )
+                # Find "Default Gateway" line with an IP
+                for line in result.stdout.split("\n"):
+                    if "Default Gateway" in line:
+                        match = re.search(
+                            r"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})",
+                            line,
+                        )
+                        if match:
+                            return match.group(1)
+
+            elif self.os_type == "Linux":
+                result = subprocess.run(
+                    ["ip", "route", "show", "default"],
+                    capture_output=True, text=True, timeout=10,
+                )
+                # "default via 192.168.1.1 dev wlan0 ..."
+                match = re.search(
+                    r"default via (\d{1,3}\.\d{1,3}\.\d{1,3}"
+                    r"\.\d{1,3})",
+                    result.stdout,
+                )
+                if match:
+                    return match.group(1)
+
+            elif self.os_type == "Darwin":
+                result = subprocess.run(
+                    ["route", "-n", "get", "default"],
+                    capture_output=True, text=True, timeout=10,
+                )
+                for line in result.stdout.split("\n"):
+                    if "gateway" in line.lower():
+                        match = re.search(
+                            r"(\d{1,3}\.\d{1,3}\.\d{1,3}"
+                            r"\.\d{1,3})",
+                            line,
+                        )
+                        if match:
+                            return match.group(1)
+
+        except Exception as exc:
+            logger.debug("Could not detect gateway: %s", exc)
+
+        return None
 
     # ─────────────────────────────────────────────────────────
     #  Get current connected SSID

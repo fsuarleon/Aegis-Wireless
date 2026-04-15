@@ -1,10 +1,10 @@
-('C:\\Users\\rylan\\Downloads\\Test '
- 'Enviorment\\Aegis_Wireless\\dist\\AegisWireless.exe',
+('C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+ '(2)\\dist\\AegisWireless.exe',
  False,
  False,
  False,
- ['C:\\Users\\rylan\\Downloads\\Test '
-  'Enviorment\\Aegis_Wireless\\assets\\aegis_icon.ico'],
+ ['C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+  '(2)\\assets\\aegis_icon.ico'],
  None,
  False,
  False,
@@ -31,32 +31,32 @@
  None,
  None,
  None,
- 'C:\\Users\\rylan\\Downloads\\Test '
- 'Enviorment\\Aegis_Wireless\\build\\AegisWireless\\AegisWireless.pkg',
+ 'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+ '(2)\\build\\AegisWireless\\AegisWireless.pkg',
  [('pyi-contents-directory _internal', '', 'OPTION'),
   ('PYZ-00.pyz',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\build\\AegisWireless\\PYZ-00.pyz',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\build\\AegisWireless\\PYZ-00.pyz',
    'PYZ'),
   ('struct',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\build\\AegisWireless\\localpycs\\struct.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\build\\AegisWireless\\localpycs\\struct.pyc',
    'PYMODULE'),
   ('pyimod01_archive',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\build\\AegisWireless\\localpycs\\pyimod01_archive.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\build\\AegisWireless\\localpycs\\pyimod01_archive.pyc',
    'PYMODULE'),
   ('pyimod02_importers',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\build\\AegisWireless\\localpycs\\pyimod02_importers.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\build\\AegisWireless\\localpycs\\pyimod02_importers.pyc',
    'PYMODULE'),
   ('pyimod03_ctypes',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\build\\AegisWireless\\localpycs\\pyimod03_ctypes.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\build\\AegisWireless\\localpycs\\pyimod03_ctypes.pyc',
    'PYMODULE'),
   ('pyimod04_pywin32',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\build\\AegisWireless\\localpycs\\pyimod04_pywin32.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\build\\AegisWireless\\localpycs\\pyimod04_pywin32.pyc',
    'PYMODULE'),
   ('pyiboot01_bootstrap',
    'C:\\Users\\rylan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
@@ -71,8 +71,7 @@
    'C:\\Users\\rylan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
    'PYSOURCE'),
   ('aegis_tray',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\aegis_tray.pyw',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\aegis_tray.pyw',
    'PYSOURCE'),
   ('python313.dll',
    'C:\\Program '
@@ -176,152 +175,89 @@
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\VCRUNTIME140_1.dll',
    'BINARY'),
   ('api\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\__init__.py',
-   'DATA'),
-  ('api\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('api\\__pycache__\\telemetry.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\__pycache__\\telemetry.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\api\\__init__.py',
    'DATA'),
   ('api\\telemetry.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\telemetry.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\api\\telemetry.py',
    'DATA'),
   ('assets\\aegis_icon.ico',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\assets\\aegis_icon.ico',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\assets\\aegis_icon.ico',
    'DATA'),
   ('assets\\aegis_icon.png',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\assets\\aegis_icon.png',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\assets\\aegis_icon.png',
+   'DATA'),
+  ('config\\SETTINGS_GUIDE.md',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\config\\SETTINGS_GUIDE.md',
    'DATA'),
   ('config\\blacklist.json',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\config\\blacklist.json',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\config\\blacklist.json',
    'DATA'),
   ('config\\settings.json',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\config\\settings.json',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\config\\settings.json',
    'DATA'),
   ('core\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__init__.py',
-   'DATA'),
-  ('core\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('core\\__pycache__\\blacklist.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__pycache__\\blacklist.cpython-313.pyc',
-   'DATA'),
-  ('core\\__pycache__\\engine.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__pycache__\\engine.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\__init__.py',
    'DATA'),
   ('core\\blacklist.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\blacklist.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\blacklist.py',
    'DATA'),
   ('core\\engine.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\engine.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\engine.py',
    'DATA'),
   ('network\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__init__.py',
-   'DATA'),
-  ('network\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('network\\__pycache__\\enforcement.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__pycache__\\enforcement.cpython-313.pyc',
-   'DATA'),
-  ('network\\__pycache__\\vpn_tunnel.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__pycache__\\vpn_tunnel.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\network\\__init__.py',
    'DATA'),
   ('network\\enforcement.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\enforcement.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\network\\enforcement.py',
    'DATA'),
   ('network\\monitor.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\monitor.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\network\\monitor.py',
    'DATA'),
   ('network\\vpn_tunnel.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\vpn_tunnel.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\network\\vpn_tunnel.py',
    'DATA'),
   ('scanner\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\scanner\\__init__.py',
    'DATA'),
-  ('scanner\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('scanner\\__pycache__\\port_probe.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__pycache__\\port_probe.cpython-313.pyc',
-   'DATA'),
-  ('scanner\\__pycache__\\wifi_scan.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__pycache__\\wifi_scan.cpython-313.pyc',
+  ('scanner\\frame_inspector.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\frame_inspector.py',
    'DATA'),
   ('scanner\\port_probe.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\port_probe.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\port_probe.py',
    'DATA'),
   ('scanner\\wifi_scan.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\wifi_scan.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\wifi_scan.py',
    'DATA'),
   ('ui\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__init__.py',
-   'DATA'),
-  ('ui\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('ui\\__pycache__\\notifications.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\notifications.cpython-313.pyc',
-   'DATA'),
-  ('ui\\__pycache__\\startup.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\startup.cpython-313.pyc',
-   'DATA'),
-  ('ui\\__pycache__\\tray.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\tray.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\__init__.py',
    'DATA'),
   ('ui\\notifications.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\notifications.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\notifications.py',
    'DATA'),
   ('ui\\startup.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\startup.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\startup.py',
    'DATA'),
   ('ui\\tray.py',
-   'C:\\Users\\rylan\\Downloads\\Test Enviorment\\Aegis_Wireless\\ui\\tray.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\tray.py',
    'DATA'),
   ('base_library.zip',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\build\\AegisWireless\\base_library.zip',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\build\\AegisWireless\\base_library.zip',
    'DATA')],
  [],
  False,
  False,
- 1776223750,
+ 1776265018,
  [('runw.exe',
    'C:\\Users\\rylan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',
    'EXECUTABLE')],

@@ -119,6 +119,9 @@ class PortScanner:
 
     def _load_settings(self):
         """Try to load scan settings from config/settings.json."""
+        self.common_ports = sorted(PORT_DATABASE.keys())
+        self.default_port_range = (1, 1024)
+
         config_path = (Path(__file__).parent.parent
                        / "config" / "settings.json")
         if config_path.exists():
@@ -132,6 +135,12 @@ class PortScanner:
                 self.max_threads = scan_cfg.get(
                     "max_threads", self.max_threads
                 )
+                if "common_ports" in scan_cfg:
+                    self.common_ports = sorted(scan_cfg["common_ports"])
+                if "default_port_range" in scan_cfg:
+                    pr = scan_cfg["default_port_range"]
+                    if isinstance(pr, list) and len(pr) == 2:
+                        self.default_port_range = (pr[0], pr[1])
             except (json.JSONDecodeError, KeyError):
                 pass  # Use defaults if config is broken
 
@@ -205,13 +214,12 @@ class PortScanner:
         return report
 
     def quick_scan(self, target: str) -> ScanReport:
-        """Scan only the common/dangerous ports (fast)."""
-        common = sorted(PORT_DATABASE.keys())
-        return self.scan(target, specific_ports=common)
+        """Scan only the common ports from settings.json (fast)."""
+        return self.scan(target, specific_ports=self.common_ports)
 
     def full_scan(self, target: str) -> ScanReport:
-        """Scan the first 1024 ports (slower but thorough)."""
-        return self.scan(target, port_range=(1, 1024))
+        """Scan the default_port_range from settings.json."""
+        return self.scan(target, port_range=self.default_port_range)
 
     # ── INTERNAL METHODS ────────────────────────────────────────
 

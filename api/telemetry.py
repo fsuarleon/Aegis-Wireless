@@ -38,14 +38,28 @@ class AegisLogger:
         """
         Args:
             log_dir: Directory to store log files.
-                    Defaults to 'logs/' in the project folder.
+                    Defaults to 'logs/' in the project folder,
+                    or whatever is set in settings.json.
         """
+        # ── Load logging settings from settings.json ──
+        project_root = str(Path(__file__).parent.parent)
+        log_cfg = self._load_logging_settings()
+
         if log_dir is None:
-            log_dir = str(
-                Path(__file__).parent.parent / "logs"
-            )
+            configured_dir = log_cfg.get("log_directory", "logs")
+            # Support both relative and absolute paths
+            if os.path.isabs(configured_dir):
+                log_dir = configured_dir
+            else:
+                log_dir = os.path.join(project_root, configured_dir)
 
         self.log_dir = log_dir
+        self.log_format = log_cfg.get(
+            "log_format",
+            "%(asctime)s | %(levelname)-8s | %(message)s"
+        )
+        self.max_log_files = log_cfg.get("max_log_files", 30)
+
         # Create the logs folder if it doesn't exist
         os.makedirs(self.log_dir, exist_ok=True)
 
@@ -54,6 +68,9 @@ class AegisLogger:
 
         # Set up Python's built-in logging for text logs
         self.logger = self._setup_text_logger()
+
+        # Enforce max log file retention
+        self._enforce_log_retention()
 
         # JSON log data (saved at end of session)
         self.session_data: Dict = {
@@ -65,6 +82,47 @@ class AegisLogger:
             "enforcement_actions": [],
             "blacklist_changes": [],
         }
+
+    @staticmethod
+    def _load_logging_settings() -> dict:
+        """Load the logging section from settings.json."""
+        config_path = (
+            Path(__file__).parent.parent / "config" / "settings.json"
+        )
+        try:
+            with open(config_path, encoding="utf-8") as f:
+                data = json.load(f)
+            return data.get("logging", {})
+        except (FileNotFoundError, json.JSONDecodeError):
+            return {}
+
+    def _enforce_log_retention(self):
+        """Delete old log files beyond max_log_files limit."""
+        if self.max_log_files <= 0:
+            return  # 0 = keep forever
+
+        log_files = sorted(
+            f for f in os.listdir(self.log_dir)
+            if f.startswith("aegis_") and (
+                f.endswith(".log") or f.endswith(".json")
+            )
+        )
+        # Group by date (each date has .log + .json = 2 files)
+        dates = sorted(set(
+            f.replace("aegis_", "").rsplit(".", 1)[0]
+            for f in log_files
+        ))
+        if len(dates) > self.max_log_files:
+            for old_date in dates[:-self.max_log_files]:
+                for ext in (".log", ".json"):
+                    old_path = os.path.join(
+                        self.log_dir, f"aegis_{old_date}{ext}"
+                    )
+                    if os.path.exists(old_path):
+                        try:
+                            os.remove(old_path)
+                        except OSError:
+                            pass
 
     # ── PUBLIC METHODS ──────────────────────────────────────────
 
@@ -276,9 +334,9 @@ class AegisLogger:
         ch = logging.StreamHandler()
         ch.setLevel(logging.INFO)
 
-        # Format: timestamp | level | message
+        # Format: uses log_format from settings.json
         formatter = logging.Formatter(
-            "%(asctime)s | %(levelname)-8s | %(message)s",
+            self.log_format,
             datefmt="%Y-%m-%d %H:%M:%S"
         )
         fh.setFormatter(formatter)

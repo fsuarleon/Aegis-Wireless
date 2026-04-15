@@ -43,6 +43,15 @@ class WiFiNetwork:
     channel: int = 0                   # Radio channel number
     band: str = ""                     # 2.4 GHz or 5 GHz
 
+    # 802.11 frame inspection results (populated when available)
+    frame_validated: bool = False      # Was frame inspection run?
+    frame_encryption: str = ""         # Encryption from beacon frame
+    frame_ciphers: str = ""            # e.g. "CCMP-128, TKIP"
+    frame_akm: str = ""               # e.g. "PSK, SAE"
+    frame_mismatch: bool = False       # OS vs frame disagreement?
+    frame_downgrade: bool = False      # TKIP-only on WPA2 label?
+    frame_pmf: bool = False            # 802.11w PMF capable?
+
     def to_dict(self) -> dict:
         """Convert this network's info into a plain dictionary."""
         return asdict(self)
@@ -55,6 +64,9 @@ class WiFiScanner:
     """
     Scans for nearby WiFi networks using OS-level commands.
     No admin/root privileges needed for basic scanning.
+
+    When Scapy is available the scanner also performs 802.11
+    frame inspection to validate encryption from raw beacons.
     """
 
     def __init__(self):
@@ -64,12 +76,27 @@ class WiFiScanner:
         # This list will hold all the networks we find
         self.networks: List[WiFiNetwork] = []
 
+        # 802.11 frame inspector (optional — needs Scapy)
+        self._frame_inspector = None
+        self._last_frame_data = {}
+        self._last_validation = []
+        try:
+            from scanner.frame_inspector import FrameInspector
+            self._frame_inspector = FrameInspector()
+        except Exception:
+            pass
+
     # ── PUBLIC METHODS (the ones you actually call) ─────────────
 
-    def scan(self) -> List[WiFiNetwork]:
+    def scan(self, frame_inspect: bool = True) -> List[WiFiNetwork]:
         """
         Run a WiFi scan and return a list of WiFiNetwork objects.
         Automatically picks the right method for your OS.
+
+        Args:
+            frame_inspect: If True (default) and Scapy is available,
+                          also run 802.11 frame inspection to validate
+                          encryption from raw beacon frames.
         """
         # Clear any old results
         self.networks = []
@@ -86,7 +113,73 @@ class WiFiScanner:
 
         # Sort by signal strength (strongest first)
         self.networks.sort(key=lambda n: n.signal_strength, reverse=True)
+
+        # ── 802.11 frame inspection (enrichment layer) ──
+        if frame_inspect and self.networks:
+            self._run_frame_inspection()
+
         return self.networks
+
+    def _run_frame_inspection(self):
+        """
+        Run Scapy-based 802.11 frame inspection and enrich
+        the WiFiNetwork objects with beacon-level data.
+
+        This validates the OS-reported encryption against what
+        the actual 802.11 beacon frames advertise, and adds
+        cipher suite and AKM details.
+        """
+        if self._frame_inspector is None:
+            return
+        if not self._frame_inspector.available:
+            return
+
+        try:
+            # Capture beacons for a few seconds
+            frame_data = self._frame_inspector.inspect(timeout=4)
+            self._last_frame_data = frame_data
+
+            if not frame_data:
+                return
+
+            # Cross-validate OS results against frame data
+            validations = self._frame_inspector.validate(
+                self.networks, frame_data
+            )
+            self._last_validation = validations
+
+            # Build a lookup by BSSID for quick matching
+            val_by_bssid = {v.bssid: v for v in validations}
+
+            # Enrich each WiFiNetwork with frame-level detail
+            for net in self.networks:
+                bssid = net.bssid.upper().strip()
+                if bssid in frame_data:
+                    info = frame_data[bssid]
+                    net.frame_validated = True
+                    net.frame_encryption = info.encryption_label
+                    net.frame_ciphers = ", ".join(
+                        info.rsn_pairwise_ciphers
+                        or info.wpa_pairwise_ciphers
+                    )
+                    net.frame_akm = ", ".join(
+                        info.rsn_akm_suites
+                        or info.wpa_akm_suites
+                    )
+                    net.frame_pmf = info.supports_pmf
+
+                if bssid in val_by_bssid:
+                    val = val_by_bssid[bssid]
+                    net.frame_mismatch = not val.match
+                    net.frame_downgrade = val.downgrade_risk
+
+        except Exception as exc:
+            # Never let frame inspection break the scan
+            pass
+
+    def get_frame_validation(self) -> list:
+        """Return the last frame validation results as dicts."""
+        return [v.to_dict() for v in self._last_validation]
 
     def get_results_as_dicts(self) -> List[dict]:
         """Return scan results as plain dictionaries (for JSON logging)."""

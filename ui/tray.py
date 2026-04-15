@@ -195,6 +195,7 @@ class AegisTray:
             enforcer=self.enforcer,
             aegis_logger=self.logger,
             policy=self.policy,
+            port_scanner=self.port_scanner,
         )
 
     # ─────────────────────────────────────────────────────────

@@ -1,6 +1,5 @@
-(['C:\\Users\\rylan\\Downloads\\Test '
-  'Enviorment\\Aegis_Wireless\\aegis_tray.pyw'],
- ['C:\\Users\\rylan\\Downloads\\Test Enviorment\\Aegis_Wireless'],
+(['C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\aegis_tray.pyw'],
+ ['C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)'],
  ['ui',
   'ui.tray',
   'ui.notifications',
@@ -27,143 +26,80 @@
  0,
  [],
  [('api\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\__init__.py',
-   'DATA'),
-  ('api\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('api\\__pycache__\\telemetry.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\__pycache__\\telemetry.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\api\\__init__.py',
    'DATA'),
   ('api\\telemetry.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\telemetry.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\api\\telemetry.py',
    'DATA'),
   ('assets\\aegis_icon.ico',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\assets\\aegis_icon.ico',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\assets\\aegis_icon.ico',
    'DATA'),
   ('assets\\aegis_icon.png',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\assets\\aegis_icon.png',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\assets\\aegis_icon.png',
+   'DATA'),
+  ('config\\SETTINGS_GUIDE.md',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\config\\SETTINGS_GUIDE.md',
    'DATA'),
   ('config\\blacklist.json',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\config\\blacklist.json',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\config\\blacklist.json',
    'DATA'),
   ('config\\settings.json',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\config\\settings.json',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\config\\settings.json',
    'DATA'),
   ('core\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__init__.py',
-   'DATA'),
-  ('core\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('core\\__pycache__\\blacklist.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__pycache__\\blacklist.cpython-313.pyc',
-   'DATA'),
-  ('core\\__pycache__\\engine.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__pycache__\\engine.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\__init__.py',
    'DATA'),
   ('core\\blacklist.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\blacklist.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\blacklist.py',
    'DATA'),
   ('core\\engine.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\engine.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\engine.py',
    'DATA'),
   ('network\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__init__.py',
-   'DATA'),
-  ('network\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('network\\__pycache__\\enforcement.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__pycache__\\enforcement.cpython-313.pyc',
-   'DATA'),
-  ('network\\__pycache__\\vpn_tunnel.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__pycache__\\vpn_tunnel.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\network\\__init__.py',
    'DATA'),
   ('network\\enforcement.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\enforcement.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\network\\enforcement.py',
    'DATA'),
   ('network\\monitor.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\monitor.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\network\\monitor.py',
    'DATA'),
   ('network\\vpn_tunnel.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\vpn_tunnel.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\network\\vpn_tunnel.py',
    'DATA'),
   ('scanner\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\scanner\\__init__.py',
    'DATA'),
-  ('scanner\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('scanner\\__pycache__\\port_probe.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__pycache__\\port_probe.cpython-313.pyc',
-   'DATA'),
-  ('scanner\\__pycache__\\wifi_scan.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__pycache__\\wifi_scan.cpython-313.pyc',
+  ('scanner\\frame_inspector.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\frame_inspector.py',
    'DATA'),
   ('scanner\\port_probe.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\port_probe.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\port_probe.py',
    'DATA'),
   ('scanner\\wifi_scan.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\wifi_scan.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\wifi_scan.py',
    'DATA'),
   ('ui\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__init__.py',
-   'DATA'),
-  ('ui\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('ui\\__pycache__\\notifications.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\notifications.cpython-313.pyc',
-   'DATA'),
-  ('ui\\__pycache__\\startup.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\startup.cpython-313.pyc',
-   'DATA'),
-  ('ui\\__pycache__\\tray.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\tray.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\__init__.py',
    'DATA'),
   ('ui\\notifications.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\notifications.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\notifications.py',
    'DATA'),
   ('ui\\startup.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\startup.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\startup.py',
    'DATA'),
   ('ui\\tray.py',
-   'C:\\Users\\rylan\\Downloads\\Test Enviorment\\Aegis_Wireless\\ui\\tray.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\tray.py',
    'DATA')],
  '3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit '
  '(AMD64)]',
@@ -177,8 +113,7 @@
    'C:\\Users\\rylan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
    'PYSOURCE'),
   ('aegis_tray',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\aegis_tray.pyw',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\aegis_tray.pyw',
    'PYSOURCE')],
  [('subprocess',
    'C:\\Program '
@@ -1284,48 +1219,41 @@
    'C:\\Users\\rylan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\winotify\\audio.py',
    'PYMODULE'),
   ('api.telemetry',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\telemetry.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\api\\telemetry.py',
    'PYMODULE'),
   ('api',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\api\\__init__.py',
    'PYMODULE'),
   ('network.vpn_tunnel',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\vpn_tunnel.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\network\\vpn_tunnel.py',
    'PYMODULE'),
   ('network',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\network\\__init__.py',
    'PYMODULE'),
   ('platform',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\platform.py',
    'PYMODULE'),
   ('network.enforcement',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\enforcement.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\network\\enforcement.py',
    'PYMODULE'),
   ('core.blacklist',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\blacklist.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\blacklist.py',
    'PYMODULE'),
   ('core',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\__init__.py',
    'PYMODULE'),
   ('core.engine',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\engine.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\engine.py',
    'PYMODULE'),
   ('scanner.port_probe',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\port_probe.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\port_probe.py',
    'PYMODULE'),
   ('scanner',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\scanner\\__init__.py',
    'PYMODULE'),
   ('concurrent.futures',
    'C:\\Program '
@@ -1348,43 +1276,43 @@
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\concurrent\\__init__.py',
    'PYMODULE'),
   ('scanner.wifi_scan',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\wifi_scan.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\wifi_scan.py',
+   'PYMODULE'),
+  ('scanner.frame_inspector',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\frame_inspector.py',
    'PYMODULE'),
   ('ui.startup',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\startup.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\startup.py',
    'PYMODULE'),
   ('ui.notifications',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\notifications.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\notifications.py',
    'PYMODULE'),
   ('ui',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__init__.py',
-   'PYMODULE'),
-  ('stringprep',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\stringprep.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\__init__.py',
    'PYMODULE'),
   ('tracemalloc',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\tracemalloc.py',
    'PYMODULE'),
-  ('_py_abc',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_py_abc.py',
-   'PYMODULE'),
   ('_colorize',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_colorize.py',
    'PYMODULE'),
+  ('_py_abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_py_abc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\stringprep.py',
+   'PYMODULE'),
   ('ui.tray',
-   'C:\\Users\\rylan\\Downloads\\Test Enviorment\\Aegis_Wireless\\ui\\tray.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\tray.py',
    'PYMODULE'),
   ('network.monitor',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\monitor.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\network\\monitor.py',
    'PYMODULE')],
  [('python313.dll',
    'C:\\Program '
@@ -1490,207 +1418,200 @@
  [],
  [],
  [('api\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\__init__.py',
-   'DATA'),
-  ('api\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('api\\__pycache__\\telemetry.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\__pycache__\\telemetry.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\api\\__init__.py',
    'DATA'),
   ('api\\telemetry.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\api\\telemetry.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\api\\telemetry.py',
    'DATA'),
   ('assets\\aegis_icon.ico',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\assets\\aegis_icon.ico',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\assets\\aegis_icon.ico',
    'DATA'),
   ('assets\\aegis_icon.png',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\assets\\aegis_icon.png',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\assets\\aegis_icon.png',
+   'DATA'),
+  ('config\\SETTINGS_GUIDE.md',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\config\\SETTINGS_GUIDE.md',
    'DATA'),
   ('config\\blacklist.json',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\config\\blacklist.json',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\config\\blacklist.json',
    'DATA'),
   ('config\\settings.json',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\config\\settings.json',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\config\\settings.json',
    'DATA'),
   ('core\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__init__.py',
-   'DATA'),
-  ('core\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('core\\__pycache__\\blacklist.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__pycache__\\blacklist.cpython-313.pyc',
-   'DATA'),
-  ('core\\__pycache__\\engine.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\__pycache__\\engine.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\__init__.py',
    'DATA'),
   ('core\\blacklist.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\blacklist.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\blacklist.py',
    'DATA'),
   ('core\\engine.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\core\\engine.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\core\\engine.py',
    'DATA'),
   ('network\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__init__.py',
-   'DATA'),
-  ('network\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('network\\__pycache__\\enforcement.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__pycache__\\enforcement.cpython-313.pyc',
-   'DATA'),
-  ('network\\__pycache__\\vpn_tunnel.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\__pycache__\\vpn_tunnel.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\network\\__init__.py',
    'DATA'),
   ('network\\enforcement.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\enforcement.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\network\\enforcement.py',
    'DATA'),
   ('network\\monitor.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\monitor.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\network\\monitor.py',
    'DATA'),
   ('network\\vpn_tunnel.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\network\\vpn_tunnel.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\network\\vpn_tunnel.py',
    'DATA'),
   ('scanner\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__init__.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\scanner\\__init__.py',
    'DATA'),
-  ('scanner\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('scanner\\__pycache__\\port_probe.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__pycache__\\port_probe.cpython-313.pyc',
-   'DATA'),
-  ('scanner\\__pycache__\\wifi_scan.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\__pycache__\\wifi_scan.cpython-313.pyc',
+  ('scanner\\frame_inspector.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\frame_inspector.py',
    'DATA'),
   ('scanner\\port_probe.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\port_probe.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\port_probe.py',
    'DATA'),
   ('scanner\\wifi_scan.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\scanner\\wifi_scan.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\scanner\\wifi_scan.py',
    'DATA'),
   ('ui\\__init__.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__init__.py',
-   'DATA'),
-  ('ui\\__pycache__\\__init__.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\__init__.cpython-313.pyc',
-   'DATA'),
-  ('ui\\__pycache__\\notifications.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\notifications.cpython-313.pyc',
-   'DATA'),
-  ('ui\\__pycache__\\startup.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\startup.cpython-313.pyc',
-   'DATA'),
-  ('ui\\__pycache__\\tray.cpython-313.pyc',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\__pycache__\\tray.cpython-313.pyc',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\__init__.py',
    'DATA'),
   ('ui\\notifications.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\notifications.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\notifications.py',
    'DATA'),
   ('ui\\startup.py',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\ui\\startup.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\startup.py',
    'DATA'),
   ('ui\\tray.py',
-   'C:\\Users\\rylan\\Downloads\\Test Enviorment\\Aegis_Wireless\\ui\\tray.py',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main (2)\\ui\\tray.py',
    'DATA'),
   ('base_library.zip',
-   'C:\\Users\\rylan\\Downloads\\Test '
-   'Enviorment\\Aegis_Wireless\\build\\AegisWireless\\base_library.zip',
+   'C:\\Users\\rylan\\Downloads\\Aegis-Wireless-main '
+   '(2)\\build\\AegisWireless\\base_library.zip',
    'DATA')],
- [('genericpath',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\genericpath.py',
-   'PYMODULE'),
-  ('keyword',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py',
-   'PYMODULE'),
-  ('io',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\io.py',
-   'PYMODULE'),
-  ('reprlib',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\reprlib.py',
-   'PYMODULE'),
-  ('operator',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\operator.py',
-   'PYMODULE'),
-  ('linecache',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\linecache.py',
-   'PYMODULE'),
-  ('sre_parse',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_parse.py',
-   'PYMODULE'),
-  ('copyreg',
+ [('copyreg',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\copyreg.py',
    'PYMODULE'),
-  ('ntpath',
+  ('heapq',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\ntpath.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\heapq.py',
    'PYMODULE'),
-  ('enum',
+  ('weakref',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\enum.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\weakref.py',
+   'PYMODULE'),
+  ('codecs',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\codecs.py',
    'PYMODULE'),
   ('_weakrefset',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_weakrefset.py',
    'PYMODULE'),
+  ('sre_parse',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_parse.py',
+   'PYMODULE'),
   ('stat',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\stat.py',
    'PYMODULE'),
-  ('locale',
+  ('sre_constants',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\locale.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_constants.py',
+   'PYMODULE'),
+  ('_collections_abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_collections_abc.py',
+   'PYMODULE'),
+  ('keyword',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py',
+   'PYMODULE'),
+  ('operator',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\operator.py',
+   'PYMODULE'),
+  ('collections',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\collections\\__init__.py',
    'PYMODULE'),
   ('functools',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\functools.py',
    'PYMODULE'),
-  ('collections',
+  ('types',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\collections\\__init__.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\types.py',
+   'PYMODULE'),
+  ('warnings',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\warnings.py',
+   'PYMODULE'),
+  ('io',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\io.py',
+   'PYMODULE'),
+  ('traceback',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\traceback.py',
+   'PYMODULE'),
+  ('locale',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\locale.py',
+   'PYMODULE'),
+  ('ntpath',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\ntpath.py',
+   'PYMODULE'),
+  ('posixpath',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\posixpath.py',
+   'PYMODULE'),
+  ('sre_compile',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_compile.py',
+   'PYMODULE'),
+  ('enum',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\enum.py',
+   'PYMODULE'),
+  ('re._parser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_parser.py',
+   'PYMODULE'),
+  ('re._constants',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_constants.py',
+   'PYMODULE'),
+  ('re._compiler',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_compiler.py',
+   'PYMODULE'),
+  ('re._casefix',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_casefix.py',
+   'PYMODULE'),
+  ('re',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\__init__.py',
+   'PYMODULE'),
+  ('genericpath',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\genericpath.py',
+   'PYMODULE'),
+  ('abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\abc.py',
    'PYMODULE'),
   ('encodings.zlib_codec',
    'C:\\Program '
@@ -2180,69 +2101,13 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\__init__.py',
    'PYMODULE'),
-  ('posixpath',
+  ('reprlib',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\posixpath.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\reprlib.py',
    'PYMODULE'),
-  ('re._parser',
+  ('linecache',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_parser.py',
-   'PYMODULE'),
-  ('re._constants',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_constants.py',
-   'PYMODULE'),
-  ('re._compiler',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_compiler.py',
-   'PYMODULE'),
-  ('re._casefix',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_casefix.py',
-   'PYMODULE'),
-  ('re',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\__init__.py',
-   'PYMODULE'),
-  ('warnings',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\warnings.py',
-   'PYMODULE'),
-  ('heapq',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\heapq.py',
-   'PYMODULE'),
-  ('codecs',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\codecs.py',
-   'PYMODULE'),
-  ('sre_compile',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_compile.py',
-   'PYMODULE'),
-  ('types',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\types.py',
-   'PYMODULE'),
-  ('sre_constants',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_constants.py',
-   'PYMODULE'),
-  ('abc',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\abc.py',
-   'PYMODULE'),
-  ('_collections_abc',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_collections_abc.py',
-   'PYMODULE'),
-  ('weakref',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\weakref.py',
-   'PYMODULE'),
-  ('traceback',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\traceback.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\linecache.py',
    'PYMODULE'),
   ('os',
    'C:\\Program '

@@ -33,10 +33,10 @@ class RiskLevel:
     DANGEROUS = "DANGEROUS"
 
 
-# ---------- SCORING PENALTIES ----------
+# ---------- SCORING PENALTIES (defaults, overridden by settings.json) ----------
 # These numbers define how many points each problem costs.
 
-ENCRYPTION_PENALTIES = {
+DEFAULT_ENCRYPTION_PENALTIES = {
     "Open":     40,   # No encryption at all — very bad
     "WEP":      30,   # WEP can be cracked in under 60 seconds
     "WPA":      15,   # WPA v1 has known weaknesses
@@ -47,8 +47,8 @@ ENCRYPTION_PENALTIES = {
     "Unknown":  20,   # Can't determine — suspicious
 }
 
-# Ports that should NOT be open on public networks
-DANGEROUS_PORTS = {23, 135, 139, 445, 3389, 5900, 6379, 27017}
+# Ports that should NOT be open on public networks (default)
+DEFAULT_DANGEROUS_PORTS = {23, 135, 139, 445, 3389, 5900, 6379, 27017}
 
 PORT_PENALTY_DANGEROUS = 8   # Points lost per dangerous open port
 PORT_PENALTY_UNKNOWN = 3     # Points lost per unknown open port
@@ -57,6 +57,12 @@ BLACKLIST_PENALTY = 50        # Points lost for being on the blacklist
 
 # Signal strength above this % is suspiciously high
 EVIL_TWIN_SIGNAL_THRESHOLD = 95
+
+# Default safe encryption types
+DEFAULT_SAFE_ENCRYPTION = {"WPA2", "WPA3", "WPA2-Enterprise", "WPA3-Enterprise"}
+
+# Default open port warning threshold
+DEFAULT_OPEN_PORT_WARNING = 5
 
 
 # ---------- RISK FINDING DATA CONTAINER ----------
@@ -127,6 +133,44 @@ class RiskEngine:
         self.blacklist_path = blacklist_path
         self.blacklisted_networks = self._load_blacklist()
 
+        # ── Load settings from settings.json ──
+        self._settings = self._load_settings()
+        risk_cfg = self._settings.get("risk_thresholds", {})
+        policy_cfg = self._settings.get("policy", {})
+
+        # Apply risk_thresholds settings (fall back to defaults)
+        self.dangerous_ports = set(
+            risk_cfg.get("dangerous_ports", DEFAULT_DANGEROUS_PORTS)
+        )
+        self.safe_encryption_types = set(
+            risk_cfg.get("safe_encryption_types", DEFAULT_SAFE_ENCRYPTION)
+        )
+        self.open_port_warning = risk_cfg.get(
+            "open_port_warning", DEFAULT_OPEN_PORT_WARNING
+        )
+
+        # Build encryption penalties dynamically from safe list
+        self.encryption_penalties = dict(DEFAULT_ENCRYPTION_PENALTIES)
+        for enc_type in self.safe_encryption_types:
+            self.encryption_penalties[enc_type] = 0
+
+        # Apply policy settings
+        self.max_acceptable_risk_score = policy_cfg.get(
+            "max_acceptable_risk_score", 40
+        )
+
+    @staticmethod
+    def _load_settings() -> dict:
+        """Load settings.json, returning {} on any failure."""
+        config_path = (
+            Path(__file__).parent.parent / "config" / "settings.json"
+        )
+        try:
+            with open(config_path, encoding="utf-8") as f:
+                return json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            return {}
+
     # ── PUBLIC METHODS ──────────────────────────────────────────
 
     def analyze(self, wifi_network,
@@ -152,6 +196,7 @@ class RiskEngine:
         if port_report:
             self._check_ports(port_report, assessment)
         self._check_signal_anomaly(wifi_network, assessment)
+        self._check_frame_validation(wifi_network, assessment)
         self._check_blacklist(wifi_network, assessment)
 
         # Calculate final score (can't go below 0)
@@ -159,9 +204,11 @@ class RiskEngine:
         assessment.safety_score = max(0, 100 - total_penalty)
 
         # Assign risk level based on score
+        # max_acceptable_risk_score from settings.json defines
+        # the boundary below which a network is DANGEROUS
         if assessment.safety_score >= 70:
             assessment.risk_level = RiskLevel.SAFE
-        elif assessment.safety_score >= 40:
+        elif assessment.safety_score >= self.max_acceptable_risk_score:
             assessment.risk_level = RiskLevel.MODERATE
         else:
             assessment.risk_level = RiskLevel.DANGEROUS
@@ -202,7 +249,7 @@ class RiskEngine:
     def _check_encryption(self, network, assessment):
         """Check if the network encryption is strong enough."""
         enc = network.encryption
-        penalty = ENCRYPTION_PENALTIES.get(enc, 15)
+        penalty = self.encryption_penalties.get(enc, 15)
 
         if penalty > 0:
             # Determine severity and create a helpful message
@@ -258,7 +305,7 @@ class RiskEngine:
         for port_result in port_report.open_ports:
             assessment.open_ports.append(port_result.port)
 
-            if port_result.port in DANGEROUS_PORTS:
+            if port_result.port in self.dangerous_ports:
                 assessment.findings.append(RiskFinding(
                     category="dangerous_port",
                     severity="high",
@@ -306,6 +353,58 @@ class RiskEngine:
                     "network name matches the official one. "
                     "An attacker's fake AP is often placed "
                     "physically close to targets.",
+            ))
+
+    def _check_frame_validation(self, network, assessment):
+        """
+        Check 802.11 frame inspection results for mismatches
+        or downgrade risks.
+
+        These fields are populated by wifi_scan.py when Scapy
+        is available and frame inspection has run.
+        """
+        # Only check if frame inspection data exists
+        if not getattr(network, "frame_validated", False):
+            return
+
+        # ── Encryption mismatch ──
+        if getattr(network, "frame_mismatch", False):
+            frame_enc = getattr(network, "frame_encryption", "?")
+            assessment.findings.append(RiskFinding(
+                category="frame_mismatch",
+                severity="high",
+                description=(
+                    f"802.11 frame inspection detected an "
+                    f"encryption mismatch: OS reports "
+                    f"'{network.encryption}' but the beacon "
+                    f"frame indicates '{frame_enc}'."
+                ),
+                penalty=20,
+                recommendation=(
+                    "This may indicate a spoofed access point "
+                    "or a misconfigured router. Verify the "
+                    "network identity with venue staff."
+                ),
+            ))
+
+        # ── Cipher downgrade risk ──
+        if getattr(network, "frame_downgrade", False):
+            ciphers = getattr(network, "frame_ciphers", "")
+            assessment.findings.append(RiskFinding(
+                category="frame_downgrade",
+                severity="high",
+                description=(
+                    f"802.11 frame inspection detected a cipher "
+                    f"downgrade risk: network advertises WPA2 but "
+                    f"only offers TKIP ({ciphers}). TKIP has "
+                    f"known cryptographic weaknesses."
+                ),
+                penalty=15,
+                recommendation=(
+                    "Avoid this network or use a VPN. A properly "
+                    "configured WPA2 network should offer CCMP "
+                    "(AES) not just TKIP."
+                ),
             ))
 
     def _check_blacklist(self, network, assessment):

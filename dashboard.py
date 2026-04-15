@@ -400,6 +400,94 @@ body::after {
 .finding-text strong { color: var(--text-primary); font-weight: 600; }
 .finding-rec { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
 
+/* ── Log Viewer ── */
+.log-viewer { grid-column: 1 / -1; margin-top: 8px; }
+.log-toolbar {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 20px; border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+.log-select {
+    padding: 7px 12px; border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-deep); color: var(--text-primary);
+    font-family: 'Outfit', sans-serif; font-size: 13px;
+    cursor: pointer;
+}
+.log-select:focus { outline: none; border-color: var(--cyan); }
+.log-filter-group { display: flex; gap: 6px; margin-left: auto; }
+.log-filter-btn {
+    padding: 5px 12px; border-radius: 6px; border: 1px solid var(--border);
+    background: transparent; color: var(--text-muted); font-size: 12px;
+    font-family: 'Outfit', sans-serif; cursor: pointer; transition: all 0.2s;
+}
+.log-filter-btn:hover { border-color: var(--cyan); color: var(--text-secondary); }
+.log-filter-btn.active { background: var(--cyan-dim); border-color: var(--cyan); color: var(--cyan); }
+.log-entries { max-height: 520px; overflow-y: auto; }
+.log-entries::-webkit-scrollbar { width: 4px; }
+.log-entries::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.log-entry {
+    display: flex; gap: 12px; padding: 10px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px; align-items: flex-start;
+    transition: background 0.15s;
+}
+.log-entry:hover { background: var(--bg-card-hover); }
+.log-entry:last-child { border-bottom: none; }
+.log-time {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    color: var(--text-muted); white-space: nowrap; min-width: 75px;
+    flex-shrink: 0;
+}
+.log-type-badge {
+    font-size: 10px; padding: 2px 8px; border-radius: 4px;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+    flex-shrink: 0; min-width: 70px; text-align: center;
+}
+.log-type-wifi { background: #22d3ee15; color: var(--cyan); }
+.log-type-port { background: #a78bfa15; color: var(--purple); }
+.log-type-risk { background: var(--yellow-bg); color: var(--yellow); }
+.log-type-enforce { background: var(--red-bg); color: var(--red); }
+.log-type-blacklist { background: #f8717115; color: var(--red); }
+.log-type-message { background: #34d39915; color: var(--green); }
+.log-msg { color: var(--text-secondary); line-height: 1.5; word-break: break-word; }
+.log-msg strong { color: var(--text-primary); font-weight: 600; }
+.log-detail {
+    margin-top: 6px; padding: 8px 12px; border-radius: 6px;
+    background: var(--bg-deep); font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--text-muted); line-height: 1.6;
+    white-space: pre-wrap; max-height: 200px; overflow-y: auto;
+}
+.log-detail::-webkit-scrollbar { width: 3px; }
+.log-detail::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+.log-session-header {
+    padding: 10px 20px; background: var(--bg-deep);
+    border-bottom: 1px solid var(--border);
+    font-size: 12px; color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.log-session-header .session-id {
+    color: var(--cyan); font-weight: 600;
+}
+.log-stats-row {
+    display: flex; gap: 16px; padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+}
+.log-stat { display: flex; align-items: center; gap: 4px; }
+.log-stat-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700; font-size: 14px;
+}
+.log-expand-btn {
+    background: none; border: none; color: var(--cyan);
+    cursor: pointer; font-size: 12px; padding: 2px 6px;
+    font-family: 'Outfit', sans-serif; opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.log-expand-btn:hover { opacity: 1; }
+
 /* ── Footer ── */
 .footer {
     text-align: center; padding: 24px;
@@ -529,6 +617,33 @@ body::after {
             <div class="panel-body" id="findingsList"></div>
         </div>
 
+    </div>
+
+    <!-- ── Log Viewer (full width) ── -->
+    <div class="panel log-viewer fade-in" id="logViewerPanel">
+        <div class="panel-header">
+            <span>&#128466; Activity Logs</span>
+            <span class="count" id="logCount">0</span>
+        </div>
+        <div class="log-toolbar">
+            <select class="log-select" id="logDateSelect" onchange="loadLogForDate()">
+                <option value="">Loading dates...</option>
+            </select>
+            <div class="log-filter-group">
+                <button class="log-filter-btn active" data-filter="all" onclick="filterLogs('all', this)">All</button>
+                <button class="log-filter-btn" data-filter="wifi" onclick="filterLogs('wifi', this)">WiFi</button>
+                <button class="log-filter-btn" data-filter="port" onclick="filterLogs('port', this)">Ports</button>
+                <button class="log-filter-btn" data-filter="risk" onclick="filterLogs('risk', this)">Risk</button>
+                <button class="log-filter-btn" data-filter="enforce" onclick="filterLogs('enforce', this)">Enforce</button>
+                <button class="log-filter-btn" data-filter="blacklist" onclick="filterLogs('blacklist', this)">Blacklist</button>
+            </div>
+        </div>
+        <div class="log-entries" id="logEntries">
+            <div class="empty-state">
+                <div class="empty-icon">&#128466;</div>
+                Select a date to browse activity logs
+            </div>
+        </div>
     </div>
 
     <footer class="footer">
@@ -782,9 +897,121 @@ function escHtml(s) {
     return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+// ── Log Viewer ──
+let _allLogEntries = [];
+let _currentFilter = 'all';
+
+async function loadLogDates() {
+    try {
+        const data = await api('/api/logs/dates');
+        const select = document.getElementById('logDateSelect');
+        if (!data.dates || data.dates.length === 0) {
+            select.innerHTML = '<option value="">No logs found</option>';
+            return;
+        }
+        let html = '<option value="">— Select a date —</option>';
+        data.dates.forEach(d => {
+            html += '<option value="' + d + '">' + d + '</option>';
+        });
+        select.innerHTML = html;
+        // Auto-select most recent date
+        select.value = data.dates[data.dates.length - 1];
+        loadLogForDate();
+    } catch(e) {
+        console.error('Failed to load log dates', e);
+    }
+}
+
+async function loadLogForDate() {
+    const date = document.getElementById('logDateSelect').value;
+    const container = document.getElementById('logEntries');
+    const countEl = document.getElementById('logCount');
+    if (!date) {
+        container.innerHTML = '<div class="empty-state"><div class="empty-icon">&#128466;</div>Select a date to browse activity logs</div>';
+        countEl.textContent = '0';
+        return;
+    }
+    try {
+        const data = await api('/api/logs/read?date=' + date);
+        _allLogEntries = data.entries || [];
+        countEl.textContent = _allLogEntries.length;
+        renderLogEntries(_allLogEntries);
+    } catch(e) {
+        container.innerHTML = '<div class="empty-state"><div class="empty-icon">&#9888;</div>Failed to load logs</div>';
+    }
+}
+
+function filterLogs(filter, btn) {
+    _currentFilter = filter;
+    document.querySelectorAll('.log-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (filter === 'all') {
+        renderLogEntries(_allLogEntries);
+    } else {
+        renderLogEntries(_allLogEntries.filter(e => e.type === filter));
+    }
+}
+
+function renderLogEntries(entries) {
+    const container = document.getElementById('logEntries');
+    const countEl = document.getElementById('logCount');
+    countEl.textContent = entries.length;
+
+    if (entries.length === 0) {
+        container.innerHTML = '<div class="empty-state"><div class="empty-icon">&#128466;</div>No log entries found for this filter</div>';
+        return;
+    }
+
+    let html = '';
+    let lastSession = null;
+
+    entries.forEach((entry, idx) => {
+        // Show session separator
+        if (entry.session_id && entry.session_id !== lastSession) {
+            lastSession = entry.session_id;
+            html += '<div class="log-session-header">'
+                + '<span>Session <span class="session-id">#' + entry.session_id + '</span></span>'
+                + '<span>' + escHtml(entry.session_start || '') + '</span>'
+                + '</div>';
+        }
+
+        const typeClass = 'log-type-' + entry.type;
+        const typeLabels = {wifi:'WiFi', port:'Port', risk:'Risk', enforce:'Enforce', blacklist:'Blacklist', message:'Info'};
+        const typeLabel = typeLabels[entry.type] || entry.type;
+
+        html += '<div class="log-entry" data-type="' + entry.type + '">'
+            + '<span class="log-time">' + escHtml(entry.time || '') + '</span>'
+            + '<span class="log-type-badge ' + typeClass + '">' + typeLabel + '</span>'
+            + '<div class="log-msg"><strong>' + escHtml(entry.title || '') + '</strong><br>' + escHtml(entry.summary || '');
+
+        // Expandable detail
+        if (entry.detail) {
+            const detailId = 'logDetail' + idx;
+            html += '<br><button class="log-expand-btn" onclick="toggleLogDetail(\'' + detailId + '\', this)">&#9660; Details</button>'
+                + '<div class="log-detail" id="' + detailId + '" style="display:none">' + escHtml(entry.detail) + '</div>';
+        }
+
+        html += '</div></div>';
+    });
+
+    container.innerHTML = html;
+}
+
+function toggleLogDetail(id, btn) {
+    const el = document.getElementById(id);
+    if (el.style.display === 'none') {
+        el.style.display = 'block';
+        btn.innerHTML = '&#9650; Hide';
+    } else {
+        el.style.display = 'none';
+        btn.innerHTML = '&#9660; Details';
+    }
+}
+
 // ── Init ──
 checkVPN();
 loadBlacklist();
+loadLogDates();
 </script>
 </body>
 </html>
@@ -945,6 +1172,170 @@ def api_blacklist_remove():
             risk_engine._load_blacklist()
         )
     return jsonify({"ok": True})
+
+
+@app.route("/api/logs/dates")
+def api_log_dates():
+    """List available log dates."""
+    log_dir = os.path.join(PROJECT_ROOT, "logs")
+    if not os.path.isdir(log_dir):
+        return jsonify({"dates": []})
+
+    dates = sorted(set(
+        f.replace("aegis_", "").rsplit(".", 1)[0]
+        for f in os.listdir(log_dir)
+        if f.startswith("aegis_") and f.endswith(".json")
+    ))
+    return jsonify({"dates": dates})
+
+
+@app.route("/api/logs/read")
+def api_log_read():
+    """Read and flatten a JSON log file into timeline entries."""
+    date = request.args.get("date", "")
+    if not date:
+        return jsonify({"entries": [], "error": "No date specified"})
+
+    log_path = os.path.join(PROJECT_ROOT, "logs", f"aegis_{date}.json")
+    if not os.path.exists(log_path):
+        return jsonify({"entries": [], "error": "Log not found"})
+
+    try:
+        with open(log_path, encoding="utf-8") as f:
+            sessions = json.load(f)
+        if not isinstance(sessions, list):
+            sessions = [sessions]
+    except (json.JSONDecodeError, IOError):
+        return jsonify({"entries": [], "error": "Log file corrupt"})
+
+    entries = []
+    for s_idx, session in enumerate(sessions, 1):
+        s_start = session.get("session_start", "")
+        s_label = str(s_idx)
+
+        # WiFi scans
+        for scan in session.get("wifi_scans", []):
+            ts = scan.get("timestamp", "")
+            nets = scan.get("networks", [])
+            count = scan.get("network_count", len(nets))
+            detail_lines = []
+            for n in nets:
+                enc = n.get("encryption", "?")
+                sig = n.get("signal_strength", 0)
+                detail_lines.append(
+                    f"{n.get('ssid','?'):<25} {enc:<12} {sig}%"
+                )
+            entries.append({
+                "type": "wifi",
+                "time": _short_time(ts),
+                "title": f"WiFi Scan — {count} network(s)",
+                "summary": ", ".join(
+                    n.get("ssid", "?") for n in nets[:5]
+                ) + ("..." if len(nets) > 5 else ""),
+                "detail": "\n".join(detail_lines) if detail_lines else None,
+                "session_id": s_label,
+                "session_start": _short_time(s_start),
+                "sort_ts": ts,
+            })
+
+        # Port scans
+        for scan in session.get("port_scans", []):
+            ts = scan.get("timestamp", "")
+            target = scan.get("target", "?")
+            open_count = scan.get("open_port_count", 0)
+            total = scan.get("total_scanned", 0)
+            detail_lines = []
+            for p in scan.get("open_ports", []):
+                detail_lines.append(
+                    f":{p.get('port','?'):<6} "
+                    f"{p.get('service','Unknown'):<15} "
+                    f"{p.get('risk_note','')}"
+                )
+            entries.append({
+                "type": "port",
+                "time": _short_time(ts),
+                "title": f"Port Scan — {target}",
+                "summary": f"{open_count} open / {total} scanned",
+                "detail": "\n".join(detail_lines) if detail_lines else None,
+                "session_id": s_label,
+                "session_start": _short_time(s_start),
+                "sort_ts": ts,
+            })
+
+        # Assessments
+        for a in session.get("assessments", []):
+            ts = a.get("timestamp", "")
+            ssid = a.get("ssid", "?")
+            score = a.get("safety_score", "?")
+            level = a.get("risk_level", "?")
+            findings = a.get("findings", [])
+            detail_lines = []
+            for f in findings:
+                sev = f.get("severity", "?").upper()
+                detail_lines.append(
+                    f"[{sev}] {f.get('description','')}"
+                )
+                detail_lines.append(
+                    f"  → {f.get('recommendation','')}"
+                )
+            entries.append({
+                "type": "risk",
+                "time": _short_time(ts),
+                "title": f"{ssid} — {level} ({score}/100)",
+                "summary": f"{len(findings)} finding(s)" if findings
+                           else "No issues detected",
+                "detail": "\n".join(detail_lines) if detail_lines else None,
+                "session_id": s_label,
+                "session_start": _short_time(s_start),
+                "sort_ts": ts,
+            })
+
+        # Enforcement actions
+        for e in session.get("enforcement_actions", []):
+            ts = e.get("timestamp", "")
+            entries.append({
+                "type": "enforce",
+                "time": _short_time(ts),
+                "title": f"{e.get('action','?').upper()} — {e.get('ssid','?')}",
+                "summary": e.get("details", ""),
+                "detail": None,
+                "session_id": s_label,
+                "session_start": _short_time(s_start),
+                "sort_ts": ts,
+            })
+
+        # Blacklist changes
+        for b in session.get("blacklist_changes", []):
+            ts = b.get("timestamp", "")
+            entries.append({
+                "type": "blacklist",
+                "time": _short_time(ts),
+                "title": f"Blacklist {b.get('action','?')} — {b.get('ssid','?')}",
+                "summary": b.get("reason", "No reason"),
+                "detail": None,
+                "session_id": s_label,
+                "session_start": _short_time(s_start),
+                "sort_ts": ts,
+            })
+
+    # Sort all entries chronologically
+    entries.sort(key=lambda x: x.get("sort_ts", ""))
+    # Remove sort key from output
+    for e in entries:
+        e.pop("sort_ts", None)
+
+    return jsonify({"entries": entries})
+
+
+def _short_time(iso_str: str) -> str:
+    """Convert ISO timestamp to short 'HH:MM:SS' display."""
+    if not iso_str:
+        return ""
+    try:
+        dt = datetime.fromisoformat(iso_str)
+        return dt.strftime("%I:%M:%S %p")
+    except (ValueError, TypeError):
+        return iso_str[:19]
 
 
 # ── ENTRY POINT ─────────────────────────────────────────────
